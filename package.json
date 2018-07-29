@@ -1,0 +1,27 @@
+{
+  "name": "quip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haleyb128/QuIP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haleyb128/QuIP/issues"
+  },
+  "homepage": "https://github.com/haleyb128/QuIP#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.38.0",
+    "sequelize-cli": "^4.0.0"
+  }
+}

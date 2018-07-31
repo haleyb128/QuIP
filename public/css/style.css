@@ -148,7 +148,7 @@ section .section-title {
 
 .frontside .card .card-title,
 .backside .card .card-title {
-    color: rgb(194, 108, 99) !important;
+    color: #c26c63 !important;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 60px;
     background-color: white;
@@ -164,4 +164,261 @@ section .section-title {
     min-width: 180px;
 
 }
+/* ==================================================================================================================
+Search Buttons ======================================================================================================
+================================================================================================================== */
+ul.search-buttons {
+  text-align: center;
+  margin-top: 50px;
+}
 
+ul.search-buttons li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+ul.search-buttons li a {
+  width: 60px;
+  height: 60px;
+  display: block;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 60px;
+  color: white;
+}
+
+ul.search-buttons li a.life {
+  background-color: #c26c63;
+}
+
+ul.search-buttons li a.love {
+  background-color: #c26c63;
+}
+
+ul.search-buttons li a.death {
+  background-color: #c26c63;
+}
+
+ul.search-buttons li a.inspiration {
+  background-color: #c26c63;
+}
+
+ul.search-buttons li a.happiness {
+  background-color: #c26c63;
+}
+ul.search-buttons li a.humor {
+  background-color: #c26c63;
+}
+ul.search-buttons li a.hope {
+  background-color: #c26c63;
+}
+ul.search-buttons li a.motivation {
+  background-color: #c26c63;
+}
+ul.search-buttons li a.friendship {
+  background-color: #c26c63;
+}
+
+/*Demo 1*/
+ul#demo1 li a {
+  transition: transform 0.2s linear;
+}
+
+ul#demo1 li:hover a {
+  transform: translateY(-10px);
+}
+/* ==================================================================================================================
+Sign Up Form ======================================================================================================
+================================================================================================================== */
+.sign-up-body {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.sign-up-body fieldset {
+  border: none;
+}
+.sign-up-body fieldset:valid > button {
+  opacity: 1;
+}
+.sign-up-body fieldset:valid > button:hover {
+  opacity: 1;
+  background: #CD3C3C;
+}
+.sign-up-body button {
+  width: 280px;
+  opacity: .5;
+  cursor: pointer;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  border: none;
+  font-family: "Lato", sans-serif;
+  padding: 20px;
+  background-color: #f65252;
+  color: white;
+  outline: none;
+  margin-top: 15px;
+}
+.sign-up-body .kickass_field {
+  margin: auto;
+  position: relative;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100px;
+  right: 0;
+  width: 280px;
+}
+.sign-up-body .kickass_field lable {
+  font-size: 14px;
+  position: absolute;
+  height: 100px;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+  top: 50px;
+  text-align: left;
+  color: #F65252;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  pointer-events: none;
+  -webkit-transition: all .2s .3s;
+  transition: all .2s .3s;
+}
+.sign-up-body .kickass_field lable span {
+  font-size: 10px;
+  color: #9f9fb5;
+  clear: left;
+  opacity: 0;
+  font-weight: 400;
+  display: block;
+  -webkit-transition: opacity .5s .0s;
+  transition: opacity .5s .0s;
+}
+.sign-up-body .kickass_field lable:after {
+  width: 4px;
+  content: '';
+  height: 8px;
+  border-bottom: 2px solid #f65252;
+  border-right: 2px solid #f65252;
+  -webkit-transform: translateX(-10px) rotate(45deg);
+          transform: translateX(-10px) rotate(45deg);
+  position: absolute;
+  left: 120%;
+  top: 30px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.sign-up-body .kickass_field input {
+  border: none;
+  color: #6E738A;
+  font-weight: 400;
+  padding: 40px 0px 10px 0px;
+  background: transparent;
+  letter-spacing: 1px;
+  outline: none;
+  font-family: "Lato", sans-serif;
+  height: 30px;
+  width: 280px;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  font-size: 14px;
+  box-shadow: 0px 2px #f65252;
+}
+.sign-up-body .kickass_field input:focus + lable {
+  color: #F65252;
+  font-size: 10px;
+  top: 10px;
+  -webkit-transition: all .2s .0s;
+  transition: all .2s .0s;
+}
+.sign-up-body .kickass_field input:focus + lable span {
+  opacity: 1;
+  -webkit-transition: opacity .5s .3s;
+  transition: opacity .5s .3s;
+}
+.sign-up-body .kickass_field input:valid + lable {
+  font-size: 10px;
+  top: 10px;
+  color: #f65252;
+}
+.sign-up-body .kickass_field input[type="password"]:valid + lable span {
+  color: #99B62F;
+}
+.sign-up-body .kickass_field input:valid + lable span {
+  opacity: 1;
+  -webkit-transition: opacity .3s 0s;
+  transition: opacity .3s 0s;
+}
+.sign-up-body .kickass_field input:valid + lable::after {
+  display: block;
+  left: 100%;
+}
+.sign-up-body .kickass_field input:invalid {
+  color: #f9f9f9;
+}
+.sign-up-body .kickass_field input:focus:invalid {
+  color: #6E738A;
+}
+
+/* --- End Form styling --- */
+/* --- Begin template styling --- */
+.sign-up-container {
+  background: #f9f9f9;
+  height: 100%;
+  border: 14px solid white;
+  padding: 40px;
+  box-sizing: border-box;
+  /* --- End template styling --- */
+}
+.container_inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.sign-up-container h1, .sign-up-container h2 {
+  font-weight: 300;
+}
+.sign-up-container h1 {
+  margin: 0;
+  color: #6E738A;
+}
+.sign-up-container p {
+  color: #6E738A;
+  font-weight: 300;
+  margin-top: 40px;
+}
+.sign-up-container .love span {
+  font-size: 12px;
+  color: #bcbcbc;
+  font-weight: 300;
+}
+.sign-up-container .love span a {
+  color: #f65252;
+  font-weight: 700;
+}
+.sign-up-container .love span img {
+  position: relative;
+  margin: 3px;
+  top: 7px;
+}
+.sign-up-container h2 {
+  margin: 7px 0 24px 0;
+  font-size: 22px;
+  color: #9A9FB5;
+}
+.sign-up-container a {
+  color: #f65252;
+  text-decoration: none;
+}
+.sign-up-container a:hover {
+  text-decoration: underline;
+}

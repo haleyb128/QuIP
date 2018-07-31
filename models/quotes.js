@@ -1,34 +1,31 @@
 module.exports = function (sequelize, DataTypes) {
     var Quote = sequelize.define("Quote", {
-        quote: {
+        Quote: {
             type: DataTypes.TEXT,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        author: {
+        Author: {
             type: DataTypes.STRING,
             allowNull: false,
             defaultValue: "Unknown",
             len: [1]
         },
-        category: {
+        Category: {
             type: DataTypes.STRING,
             allowNull: false,
             len: [1],
         },
-        subcategory: {
+        Subcategory: {
             type: DataTypes.STRING,
             allowNull: false,
         }
     });
     Quote.associate = function (models) {
-        Quote.belongsTo(models.User, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
+        Quote.belongsTo(models.User)
+        ;
     };
     return Quote;
 };

@@ -16,11 +16,11 @@ module.exports = function (app) {
         res.render('signin');
     });
 
-    app.post('/login', passport.authenticate('local-signin', {
-        successRedirect: '/favorites',
-        failureRedirect: '/signin'
-    })
-    );
+    // app.post('/login', passport.authenticate('local-signin', {
+    //     successRedirect: '/favorites',
+    //     failureRedirect: '/signin'
+    // })
+    // );
 
     app.get('/logout', function (req, res) {
         var name = req.user.username;

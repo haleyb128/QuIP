@@ -148,7 +148,7 @@ section .section-title {
 
 .frontside .card .card-title,
 .backside .card .card-title {
-    color: rgb(194, 108, 99) !important;
+    color: #c26c63 !important;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 60px;
     background-color: white;
@@ -163,5 +163,66 @@ section .section-title {
     border-radius: 90%;
     min-width: 180px;
 
+}
+ul.search-buttons {
+  text-align: center;
+  margin-top: 50px;
+}
+
+ul.search-buttons li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+ul.search-buttons li a {
+  width: 60px;
+  height: 60px;
+  display: block;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 60px;
+  color: white;
+}
+
+ul.search-buttons li a.life {
+  background-color: #c26c63;
+}
+
+ul.search-buttons li a.love {
+  background-color: #c26c63;
+}
+
+ul.search-buttons li a.death {
+  background-color: #c26c63;
+}
+
+ul.search-buttons li a.inspiration {
+  background-color: #c26c63;
+}
+
+ul.search-buttons li a.happiness {
+  background-color: #c26c63;
+}
+ul.search-buttons li a.humor {
+  background-color: #c26c63;
+}
+ul.search-buttons li a.hope {
+  background-color: #c26c63;
+}
+ul.search-buttons li a.motivation {
+  background-color: #c26c63;
+}
+ul.search-buttons li a.friendship {
+  background-color: #c26c63;
+}
+
+/*Demo 1*/
+ul#demo1 li a {
+  transition: transform 0.2s linear;
+}
+
+ul#demo1 li:hover a {
+  transform: translateY(-10px);
 }
 

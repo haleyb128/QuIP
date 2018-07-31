@@ -1,13 +1,13 @@
 module.exports = function (sequelize, DataTypes) {
-    var Favortie = sequelize.define("Favorite", {
-        quote: dateTypes.STRING
+    var Favorite = sequelize.define("Favorite", {
+        quote: DataTypes.STRING
     });
-    Favortie.associate = function (models) {
-        Favortie.belongsTo(models.User, {
+    Favorite.associate = function (models) {
+        Favorite.belongsTo(models.User, {
             foreignKey: {
                 allowNull: false
             }
         })
-        return User
     };
+    return Favorite
 };

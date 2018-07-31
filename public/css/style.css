@@ -1,8 +1,10 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
-    background-image: url("https://cdn140.picsart.com/262894730004212.png?r1024x1024") !important;
+    background-image: url("https://images.pexels.com/photos/97260/pexels-photo-97260.jpeg?cs=srgb&dl=cactus-minimalism-plant-97260.jpg&fm=jpg") !important;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center top;
 }
 
 .btn-primary:hover,
@@ -141,7 +143,7 @@ section .section-title {
 
 .backside .card a {
     font-size: 18px;
-    color: #007b5e !important;
+    color: rgb(95, 172, 113) !important;
     min-width: 180px;
 
 }
@@ -421,4 +423,18 @@ Sign Up Form ===================================================================
 }
 .sign-up-container a:hover {
   text-decoration: underline;
+}
+
+
+#Joe {
+  width: 10px;
+  height: 180px;
+  border-radius: 90%;
+  min-width: 170px;
+}
+
+
+img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(80%);
 }

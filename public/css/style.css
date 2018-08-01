@@ -484,8 +484,47 @@ img {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(80%);
 }
+.flexbox {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
 
-/* =============================  favorites page end ============================================*/
+.fav-btn {
+	display:flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+
+@keyframes favme-anime {
+  0%   { 
+		opacity: 1;
+		font-size: ms(0);
+		-webkit-text-stroke-color: transparent;
+	}
+	25%	 { 
+		opacity:.6;
+		color: #FFF;
+		font-size: ms(-2);
+		-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: #DC3232;
+	}
+	75%	 { 
+		opacity:.6;
+		color: #FFF;
+		font-size: ms(3);
+		-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: #DC3232;
+	}
+  100% { 
+		opacity: 1;
+		font-size: ms(2);
+		-webkit-text-stroke-color: transparent;
+	}
+}
 .cours2{
 	margin-top:30px;
 }
@@ -532,4 +571,28 @@ img.hover {
 	transition:1s;
 }
 
-/* =============================  favorites page end ============================================*/
+@keyframes favme-hover {
+	from {
+		font-size: ms(3);
+	}
+	80% {
+		font-size: ms(2);
+	}
+}
+
+.favme {
+	display:block;
+	font-size: ms(2);
+	width: auto;
+	height: auto;
+	cursor: pointer;
+	box-shadow: none;
+	transition: all .2s ease;
+	color: #CBCDCE;
+	margin: 0;
+  
+  #searchResults .card {
+    border: none;
+    min-width: 180px;
+
+}

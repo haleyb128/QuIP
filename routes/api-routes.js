@@ -12,23 +12,7 @@ module.exports = function (app) {
         })
     });
 
-    app.get('/signin', function (req, res) {
-        res.render('signin');
-    });
-
-    // app.post('/login', passport.authenticate('local-signin', {
-    //     successRedirect: '/favorites',
-    //     failureRedirect: '/signin'
-    // })
-    // );
-
-    app.get('/logout', function (req, res) {
-        var name = req.user.username;
-        console.log("LOGGIN OUT " + req.user.username)
-        req.logout();
-        res.redirect('/');
-        req.session.notice = "You have successfully been logged out " + name + "!";
-    });
+    
 
     //add favorites to username profile
     app.get('/api/favorites/:username', function (req, res) {
@@ -63,7 +47,7 @@ module.exports = function (app) {
         });
     });
 
-
+    
 }
 // let array = req.body;
 // array.forEach(function(element){

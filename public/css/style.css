@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center top;
+    background-position: top;
 }
 
 .btn-primary:hover,
@@ -26,7 +26,7 @@
 }
 
 section {
-    padding: 60px 0;
+    /* padding: 60px 0; */
     min-width: 180px;
 
 }
@@ -180,8 +180,8 @@ ul.search-buttons li {
 }
 
 ul.search-buttons li a {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   display: block;
   border-radius: 50px;
   text-decoration: none;
@@ -191,35 +191,78 @@ ul.search-buttons li a {
 }
 
 ul.search-buttons li a.life {
-  background-color: #c26c63;
+  background-image: url("https://image.flaticon.com/icons/svg/992/992186.svg");
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: 10px;
+  background-color: #f7996e5f
 }
 
 ul.search-buttons li a.love {
-  background-color: #c26c63;
+  background-image: url("https://image.flaticon.com/icons/svg/535/535285.svg");
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: 10px;
+  background-color: #f7996e5f
 }
 
 ul.search-buttons li a.death {
-  background-color: #c26c63;
+  background-image: url("https://image.flaticon.com/icons/svg/61/61668.svg");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position-x: 1px;
+  background-position-y: 3px;
+  background-color: #f7996e5f
 }
 
 ul.search-buttons li a.inspiration {
-  background-color: #c26c63;
+  background-image: url("https://image.flaticon.com/icons/png/128/919/919130.png");
+  background-size: 80px;
+  background-color: #f7996e5f
 }
 
 ul.search-buttons li a.happiness {
-  background-color: #c26c63;
+  background-image: url("https://image.flaticon.com/icons/svg/1007/1007336.svg");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-color: #f7996e5f
 }
+
 ul.search-buttons li a.humor {
-  background-color: #c26c63;
+  background-image: url("https://www.flaticon.com/premium-icon/icons/svg/741/741522.svg");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 12px;  
+  background-color: #f7996e5f
 }
+
 ul.search-buttons li a.hope {
-  background-color: #c26c63;
+  background-image: url("https://image.flaticon.com/icons/svg/841/841337.svg");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position-x: 12px;
+  background-position-y: 12px;
+  background-color: #f7996e5f
 }
+
 ul.search-buttons li a.motivation {
-  background-color: #c26c63;
+  background-image: url("https://image.flaticon.com/icons/svg/879/879132.svg");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 15px;
+  background-color: #f7996e5f
 }
+
 ul.search-buttons li a.friendship {
-  background-color: #c26c63;
+  background-image: url("https://image.flaticon.com/icons/svg/1006/1006096.svg");
+  background-size: 75px;
+  background-repeat: no-repeat;
+  background-position-x: 3px;
+  background-color: #f7996e5f
 }
 
 /*Demo 1*/
@@ -426,15 +469,67 @@ Sign Up Form ===================================================================
 }
 
 
-#Joe {
+#joePic {
   width: 10px;
   height: 180px;
   border-radius: 90%;
   min-width: 170px;
 }
 
+#joeBackCard{
+  min-width: 540px;
+}
 
 img {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(80%);
 }
+
+/* =============================  favorites page end ============================================*/
+.cours2{
+	margin-top:30px;
+}
+
+.cours2{
+	position:relative;
+	margin-bottom:50px;
+}
+
+img.hover {
+    width: 100%;
+}
+
+.cours3{
+	position:absolute;
+	top:-100px;
+	opacity:0;
+	background-color:rgba(0,0,0,0.3);
+	color:white;
+	padding:10p;
+}
+.cours2:hover .cours3 {
+	opacity:1;
+	top:0px;
+	transition:1s;
+}
+.cours4{
+	position:absolute;
+	padding-top:20px;
+	width:100%;
+	height:80px;
+	opacity:0;
+	bottom:-50px;
+	background-color:rgba(0,0,0,0.3);
+}
+
+.cours2:hover .cours4{
+	opacity:1;
+	bottom:0;
+	transition:1s;
+}
+.cours2:hover .hover{
+	transform:scale(1.3);
+	transition:1s;
+}
+
+/* =============================  favorites page end ============================================*/

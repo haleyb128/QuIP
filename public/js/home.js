@@ -11,6 +11,7 @@ $(document).ready(function () {
                     break
                 }
                 else {
+                    $("#userState").text("Login");
                     $("#userStateOut").hide();
                     $("#userStateIn").show();
                 }

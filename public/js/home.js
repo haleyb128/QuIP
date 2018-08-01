@@ -21,6 +21,9 @@ $(document).ready(function () {
         $.get("/api/signin", function (data) {
             for (let i = 0; i < data.length; i++) {
                 if (data[i].name === userName && data[i].password === password) {
+                    let id = data[i].id
+                    localStorage.clear();
+                    localStorage.setItem("id", id);
                     console.log("Succes!!")
                 }
                 else if (data[i].name != userName) {

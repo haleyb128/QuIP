@@ -45,12 +45,12 @@ Nav Bar ========================================================================
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                        <b>Login</b>
+                        <b id="userState"></b>
                         <span class="caret"></span>
                     </a>
                     <ul id="login-dp" class="dropdown-menu">
                         <li>
-                            <div class="row">
+                            <div class="row" id="userStateIn">
 
                                 <div class="col-md-12">
                                     Login
@@ -78,14 +78,24 @@ Nav Bar ========================================================================
                                             <b>Sign Up</b>
                                         </a>
                                     </div>
-
+                                </div>
+                            </div>
+                            <div class="row" id="userStateOut">
+                                <div class="col-md-12">
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block" id="logOut">Log Out</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                     <li class="nav-item">
                         <a class="nav-link" href="./about.html">About Us</a>
                     </li>
             </ul>
-            </div>
+        </div>
     </nav>
     <!-- ==================================================================================================================
 Search Buttons ======================================================================================================

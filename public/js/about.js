@@ -1,5 +1,30 @@
 $(document).ready(function () {
-
+    let loginID = localStorage.getItem("id")
+    console.log(loginID)
+    function loginCheck() {
+        $.get("/api/signin", function (data) {
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].id == loginID) {
+                    $("#userState").text("Logout");
+                    $("#userStateIn").hide();
+                    $("#userStateOut").show();
+                    break
+                }
+                else {
+                    $("#userState").text("Login");
+                    $("#userStateOut").hide();
+                    $("#userStateIn").show();
+                }
+            }
+        })
+    }
+    loginCheck();
+    $("#logOut").on("click", function (event) {
+        event.preventDefault();
+        localStorage.clear();
+        localStorage.setItem("id", "0");
+        location.reload();
+    })
     $("#userSubmit").on("click", function (event) {
         event.preventDefault();
         let userName = $("#exampleInputEmail2").val().trim();
@@ -33,8 +58,9 @@ $(document).ready(function () {
             if (userObj.name === userName && userObj.password === password) {
                 localStorage.clear();
                 localStorage.setItem("id", userObj.id);
-                localStorage.setItem("loggedin", "yes")
                 console.log("Succes!!")
+                location.reload();
+
             }
             else if (userObj.name != userName) {
                 alert("WRONG NAME")

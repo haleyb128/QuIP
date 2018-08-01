@@ -1,4 +1,30 @@
 $(document).ready(function () {
+    let loginID = localStorage.getItem("id")
+    console.log(loginID)
+    function loginCheck() {
+        $.get("/api/signin", function (data) {
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].id == loginID) {
+                    $("#userState").text("Logout");
+                    $("#userStateIn").hide();
+                    $("#userStateOut").show();
+                    break
+                }
+                else {
+                    $("#userState").text("Login");
+                    $("#userStateOut").hide();
+                    $("#userStateIn").show();
+                }
+            }
+        })
+    }
+    loginCheck();
+    $("#logOut").on("click", function (event) {
+        event.preventDefault();
+        localStorage.clear();
+        localStorage.setItem("id", "0");
+        location.reload();
+    })
     $("#signUp").on("click", function (event) {
         event.preventDefault();
         let name = $("#sign-username").val().trim();
@@ -21,8 +47,19 @@ $(document).ready(function () {
                 $.post("/api/createuser", {
                     name: name,
                     password: password
+                }).then(function () {
+                    $.get("/api/signin", function (data) {
+                        for (let i = 0; i < data.length; i++) {
+                            if (data[i].name === name) {
+                                localStorage.clear();
+                                localStorage.setItem("id", data[i].id);
+                                console.log("SUCCESS!")
+                            }
+                        }
+                    }).then(function () {
+                        window.location.href = "/"
+                    })
                 })
-                console.log("SUCCESS!")
             }
         })
     })
@@ -59,8 +96,8 @@ $(document).ready(function () {
             if (userObj.name === userName && userObj.password === password) {
                 localStorage.clear();
                 localStorage.setItem("id", userObj.id);
-                localStorage.setItem("loggedin", "yes")
                 console.log("Succes!!")
+                window.location.href = "/"
             }
             else if (userObj.name != userName) {
                 alert("WRONG NAME")

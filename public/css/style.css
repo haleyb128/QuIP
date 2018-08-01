@@ -7,29 +7,37 @@
     background-position: top;
 }
 
+
+body {
+  background-image: url("https://images.pexels.com/photos/97260/pexels-photo-97260.jpeg?cs=srgb&dl=cactus-minimalism-plant-97260.jpg&fm=jpg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+}
+
+
+
 .btn-primary:hover,
 .btn-primary:focus {
     background-color: #108d6f;
     border-color: #108d6f;
     box-shadow: none;
     outline: none;
-    min-width: 180px;
-
-}
+    min-width: 540px;
+  }
 
 .btn-primary {
     color: #fff;
     background-color: #007b5e;
     border-color: #007b5e;
-    min-width: 180px;
-
-}
+    min-width: 540px;
+  }
 
 section {
     /* padding: 60px 0; */
-    min-width: 180px;
-
-}
+    min-width: 540px;
+  }
 
 section .section-title {
     text-align: center;
@@ -39,15 +47,13 @@ section .section-title {
     text-transform: uppercase;
     font-size: 80px;
     font-family: 'Open Sans Condensed', sans-serif;
-    min-width: 180px;
-
-}
+    min-width: 540px;
+  }
 
 #team .card {
     border: none;
-    min-width: 180px;
-
-}
+    min-width: 540px;
+  }
 
 .image-flip:hover .backside,
 .image-flip.hover .backside {
@@ -57,9 +63,8 @@ section .section-title {
     -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
     border-radius: .25rem;
-    min-width: 180px;
-
-}
+    min-width: 540px;
+  }
 
 .image-flip:hover .frontside,
 .image-flip.hover .frontside {
@@ -67,9 +72,8 @@ section .section-title {
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    min-width: 180px;
-
-}
+    min-width: 540px;
+  }
 
 .mainflip {
     -webkit-transition: 1s;
@@ -82,9 +86,8 @@ section .section-title {
     transition: 1s;
     transform-style: preserve-3d;
     position: relative;
-    min-width: 180px;
-
-}
+    min-width: 540px;
+  }
 
 .frontside {
     position: relative;
@@ -95,7 +98,8 @@ section .section-title {
     -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
     -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
     box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-}
+    min-width: 540px;
+  }
 
 .backside {
     position: absolute;
@@ -110,7 +114,7 @@ section .section-title {
     -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
     -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
     box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-    min-width: 180px;
+    min-width: 540px;
 
 }
 
@@ -130,7 +134,7 @@ section .section-title {
     -ms-transform-style: preserve-3d;
     transition: 1s;
     transform-style: preserve-3d;
-    min-width: 180px;
+    min-width: 540px;
 
 }
 
@@ -196,7 +200,7 @@ ul.search-buttons li a.life {
   background-repeat: no-repeat;
   background-position-x: 5px;
   background-position-y: 10px;
-  background-color: #f7996e5f
+  background-color: #f7996e32
 }
 
 ul.search-buttons li a.love {
@@ -205,7 +209,7 @@ ul.search-buttons li a.love {
   background-repeat: no-repeat;
   background-position-x: 5px;
   background-position-y: 10px;
-  background-color: #f7996e5f
+  background-color: #f7996e32
 }
 
 ul.search-buttons li a.death {
@@ -214,20 +218,20 @@ ul.search-buttons li a.death {
   background-repeat: no-repeat;
   background-position-x: 1px;
   background-position-y: 3px;
-  background-color: #f7996e5f
+  background-color: #f7996e32
 }
 
 ul.search-buttons li a.inspiration {
   background-image: url("https://image.flaticon.com/icons/png/128/919/919130.png");
   background-size: 80px;
-  background-color: #f7996e5f
+  background-color: #f7996e32
 }
 
 ul.search-buttons li a.happiness {
   background-image: url("https://image.flaticon.com/icons/svg/1007/1007336.svg");
   background-size: 80px;
   background-repeat: no-repeat;
-  background-color: #f7996e5f
+  background-color: #f7996e32
 }
 
 ul.search-buttons li a.humor {
@@ -236,7 +240,7 @@ ul.search-buttons li a.humor {
   background-repeat: no-repeat;
   background-position-x: 10px;
   background-position-y: 12px;  
-  background-color: #f7996e5f
+  background-color: #f7996e32
 }
 
 ul.search-buttons li a.hope {
@@ -245,7 +249,7 @@ ul.search-buttons li a.hope {
   background-repeat: no-repeat;
   background-position-x: 12px;
   background-position-y: 12px;
-  background-color: #f7996e5f
+  background-color: #f7996e32
 }
 
 ul.search-buttons li a.motivation {
@@ -254,7 +258,7 @@ ul.search-buttons li a.motivation {
   background-repeat: no-repeat;
   background-position-x: 10px;
   background-position-y: 15px;
-  background-color: #f7996e5f
+  background-color: #f7996e32
 }
 
 ul.search-buttons li a.friendship {
@@ -262,7 +266,7 @@ ul.search-buttons li a.friendship {
   background-size: 75px;
   background-repeat: no-repeat;
   background-position-x: 3px;
-  background-color: #f7996e5f
+  background-color: #f7996e32
 }
 
 /*Demo 1*/
@@ -484,52 +488,50 @@ img {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(80%);
 }
+/*   ======================  button start  =========================== */
 
-/* =============================  favorites page end ============================================*/
-.cours2{
-	margin-top:30px;
-}
-
-.cours2{
-	position:relative;
-	margin-bottom:50px;
-}
-
-img.hover {
-    width: 100%;
+.buttonBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
 }
 
-.cours3{
-	position:absolute;
-	top:-100px;
-	opacity:0;
-	background-color:rgba(0,0,0,0.3);
-	color:white;
-	padding:10p;
+.button {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: rgba(246, 82, 82, 0.68);
+  padding: 1em 2em;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 100px;
 }
-.cours2:hover .cours3 {
-	opacity:1;
-	top:0px;
-	transition:1s;
+.button span {
+  position: relative;
+  pointer-events: none;
 }
-.cours4{
-	position:absolute;
-	padding-top:20px;
-	width:100%;
-	height:80px;
-	opacity:0;
-	bottom:-50px;
-	background-color:rgba(0,0,0,0.3);
+.button::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #a5a5a5, transparent);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: width .2s ease, height .1s ease;
+}
+.button:hover::before {
+  --size: 200px;
 }
 
-.cours2:hover .cours4{
-	opacity:1;
-	bottom:0;
-	transition:1s;
-}
-.cours2:hover .hover{
-	transform:scale(1.3);
-	transition:1s;
-}
-
-/* =============================  favorites page end ============================================*/
+/*   ======================  button end  =========================== */

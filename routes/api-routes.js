@@ -12,7 +12,17 @@ module.exports = function (app) {
         })
     });
 
-    
+    app.get('/api/signin', function (req, res) {
+        db.User.findAll().then(function (data){
+            res.json(data);
+        });
+    });
+
+    app.post("/api/createuser", function(req,res){
+        db.User.create(req.body).then(function(data){
+            res.json(data)
+        })
+    })
 
     //add favorites to username profile
     app.get('/api/favorites/:username', function (req, res) {

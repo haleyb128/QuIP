@@ -590,7 +590,7 @@ img.hover {
 	transition: all .2s ease;
 	color: #CBCDCE;
 	margin: 0;
-  
+}
   #searchResults .card {
     border: none;
     min-width: 180px;

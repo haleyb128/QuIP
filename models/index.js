@@ -35,26 +35,3 @@ db.Sequelize = Sequelize;
 
 module.exports = db;
 
-//===============PASSPORT=================
-
-// passport.use('local-signin', new LocalStrategy(
-//   {passReqToCallback : true}, 
-//   function(req, username, password, done) {
-//     funct.localAuth(username, password)
-//     .then(function (user) {
-//       if (user) {
-//         console.log("LOGGED IN AS: " + user.username);
-//         req.session.success = 'You are successfully logged in ' + user.username + '!';
-//         done(null, user);
-//       }
-//       if (!user) {
-//         console.log("COULD NOT LOG IN");
-//         req.session.error = 'Could not log user in. Please try again.'; 
-//         done(null, user);
-//       }
-//     })
-//     .fail(function (err){
-//       console.log(err.body);
-//     });
-//   }
-// ));

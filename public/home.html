@@ -57,26 +57,25 @@ Nav Bar ========================================================================
                                     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                         <div class="form-group">
                                             <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
                                         </div>
                                         <div class="form-group">
                                             <label class="sr-only" for="exampleInputPassword2">Password</label>
                                             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                            <button type="submit" class="btn btn-primary btn-block" id="userSubmit">Sign in</button>
+                                        </div>
+                                        <div class="fav-btn">
+                                            <span href="" class="favme dashicons dashicons-heart"></span>
+                                        </div>
+                                        <div class="fav-btn">
+                                            <span href="" class="favme dashicons dashicons-heart"></span>
                                         </div>
                                     </form>
                                     <div class="bottom text-center">
                                         <a href="./signUp.html">
                                             <b>Sign Up</b>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </li>
-                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./about.html">About Us</a>
@@ -90,40 +89,31 @@ Search Buttons =================================================================
 
     <ul class="search-buttons" id="demo1">
         <li>
-            <a href="#" class="life"></a>
-            <br>life
+            <a href="#" class="life" data-toggle="tooltip" data-placement="bottom" title="Life"></a>
         </li>
         <li>
-            <a href="#" class="love"></a>
-            <br>love
+            <a href="#" class="love" data-toggle="tooltip" data-placement="bottom" title="Love"></a>
         </li>
         <li>
-            <a href="#" class="death"></a>
-            <br>death
+            <a href="#" class="death" data-toggle="tooltip" data-placement="bottom" title="Death"></a>
         </li>
         <li>
-            <a href="#" class="inspiration"></a>
-            <br>inspiration
+            <a href="#" class="inspiration" data-toggle="tooltip" data-placement="bottom" title="Inspiration"></a>
         </li>
         <li>
-            <a href="#" class="happiness"></a>
-            <br>happiness
+            <a href="#" class="happiness" data-toggle="tooltip" data-placement="bottom" title="Happiness"></a>
         </li>
         <li>
-            <a href="#" class="humor"></a>
-            <br>humor
+            <a href="#" class="humor" data-toggle="tooltip" data-placement="bottom" title="Humor"></a>
         </li>
         <li>
-            <a href="#" class="hope"></a>
-            <br>hope
+            <a href="#" class="hope" data-toggle="tooltip" data-placement="bottom" title="Hope"></a>
         </li>
         <li>
-            <a href="#" class="motivation"></a>
-            <br>motivation
+            <a href="#" class="motivation" data-toggle="tooltip" data-placement="bottom" title="Motivation"></a>
         </li>
         <li>
-            <a href="#" class="friendship"></a>
-            <br>friendship
+            <a href="#" class="friendship" data-toggle="tooltip" data-placement="bottom" title="Friendship"></a>
         </li>
         <br>
         <br>
@@ -145,12 +135,11 @@ Featured Quote =================================================================
                                 <div class="card">
                                     <div class="card-body text-center">
                                         <p class="quote-body" id="quote-full">
-                                            There’s some good in this world, Mr. Frodo... and it’s worth fighting for.
                                             <!-- <img class=" img-fluid" src="C:\Users\dlars\OneDrive\Pictures\Team Photos\Dani.jpg" alt="card image"> -->
                                         </p>
                                         <br>
                                         <br>
-                                        <h4 class="card-title" id="author-name">Sam Gamgee</h4>
+                                        <h4 class="card-title" id="author-name"></h4>
                                         </a>
                                     </div>
                                 </div>
@@ -159,8 +148,8 @@ Featured Quote =================================================================
                                 <div class="card">
                                     <div class="card-body text-center mt-4">
 
-                                        <p class="card-text quote-body" id="quote-full2">There’s some good in this world, Mr. Frodo... and it’s worth fighting for.</p>
-                                        <h4 class="card-title" id="author-name2">Sam Gamgee</h4>
+                                        <p class="card-text quote-body" id="quote-full2"></p>
+                                        <h4 class="card-title" id="author-name2"></h4>
                                         <!-- <ul class="list-inline">
                                             <li class="list-inline-item">
                                                 <a class="social-icon text-xs-center" target="_blank" href="https://github.com/danilarsen16">
@@ -180,7 +169,7 @@ Featured Quote =================================================================
 Login Modal ======================================================================================================
 ================================================================================================================== -->
 
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -242,7 +231,7 @@ Sign Up Modal ==================================================================
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- ==================================================================================================================
  ====================================================================================================
 ================================================================================================================== -->

@@ -12,23 +12,17 @@ module.exports = function (app) {
         })
     });
 
-    app.get('/signin', function (req, res) {
-        res.render('signin');
+    app.get('/api/signin', function (req, res) {
+        db.User.findAll().then(function (data){
+            res.json(data);
+        });
     });
 
-    app.post('/login', passport.authenticate('local-signin', {
-        successRedirect: '/favorites',
-        failureRedirect: '/signin'
+    app.post("/api/createuser", function(req,res){
+        db.User.create(req.body).then(function(data){
+            res.json(data)
+        })
     })
-    );
-
-    app.get('/logout', function (req, res) {
-        var name = req.user.username;
-        console.log("LOGGIN OUT " + req.user.username)
-        req.logout();
-        res.redirect('/');
-        req.session.notice = "You have successfully been logged out " + name + "!";
-    });
 
     //add favorites to username profile
     app.get('/api/favorites/:username', function (req, res) {
@@ -63,6 +57,7 @@ module.exports = function (app) {
         });
     });
 
+    
 }
 // let array = req.body;
 // array.forEach(function(element){

@@ -16,11 +16,67 @@
 <body>
 
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./home.html">
+            <img class="logo" src="./transparentQ.png" height="70">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./home.html">Home
+                        <span class="sr-only"></span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <b>Login</b>
+                        <span class="caret"></span>
+                    </a>
+                    <ul id="login-dp" class="dropdown-menu">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    Login
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                        </div>
+                                    </form>
+                                    <div class="bottom text-center">
+                                        <a href="#">
+                                            <b>Sign Up</b>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about.html">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- developer tabs -->
 
     <section id="team" class="pb-5">
         <div class="container">
-            <h5 class="section-title h1">OUR TEAM</h5>
+            <h5 class="section-title h1">MEET THE DEVELOPERS</h5>
             <div class="row">
                 <!-- Team member -->
                 <div class="col-xs-12 col-sm-6 col-md-6">
@@ -43,9 +99,9 @@
                                 <div class="card">
                                     <div class="card-body text-center mt-4">
                                         <h4 class="card-title"></h4>
-                                        <p class="card-text">This is basic card with image on top, title, description and button.This is basic
-                                            card with image on top, title, description and button.This is basic card with
-                                            image on top, title, description and button.</p>
+                                        <p class="card-text">"Would I rather be feared or loved? Easy, both. I want people to be afraid of how
+                                            much they love me."
+                                            <br> - Michael Scott</p>
                                         <ul class="list-inline">
                                             <li class="list-inline-item">
                                                 <a class="social-icon text-xs-center" target="_blank" href="https://github.com/danilarsen16">
@@ -81,9 +137,7 @@
                                 <div class="card">
                                     <div class="card-body text-center mt-4">
                                         <h4 class="card-title"></h4>
-                                        <p class="card-text">This is basic card with image on top, title, description and button.This is basic
-                                            card with image on top, title, description and button.This is basic card with
-                                            image on top, title, description and button.</p>
+                                        <p class="card-text">BLAH TEXT</p>
                                         <ul class="list-inline">
                                             <li class="list-inline-item">
                                                 <a class="social-icon text-xs-center" target="_blank" href="https://github.com/AVickerman">
@@ -119,9 +173,8 @@
                                 <div class="card">
                                     <div class="card-body text-center mt-4">
                                         <h4 class="card-title"></h4>
-                                        <p class="card-text">This is basic card with image on top, title, description and button.This is basic
-                                            card with image on top, title, description and button.This is basic card with
-                                            image on top, title, description and button.</p>
+                                        <p class="card-text">There’s some good in this world, Mr. Frodo… and it’s worth fighting for.
+                                            <br> — Sam Gamgee</p>
                                         <ul class="list-inline">
                                             <li class="list-inline-item">
                                                 <a class="social-icon text-xs-center" target="_blank" href="https://github.com/haleyb128">
@@ -144,7 +197,7 @@
                                 <div class="card">
                                     <div class="card-body text-center">
                                         <p>
-                                            <img class=" img-fluid" src="images/Joe.PNG" alt="card image">
+                                            <img class=" img-fluid" id="joePic" src="C:\Users\dlars\OneDrive\Pictures\Team Photos\Joe.PNG" alt="card image">
                                         </p>
                                         <br>
                                         <br>
@@ -155,10 +208,10 @@
                             </div>
                             <div class="backside">
                                 <div class="card">
-                                    <div class="card-body text-center mt-4">
+                                    <div class="card-body text-center mt-4" id="joeBackCard">
                                         <h4 class="card-title"></h4>
                                         <p class="card-text">"As long as there's life, there's hope."
-                                            <br> - John Lennon, a few hours before he was murdered.</p>
+                                            <br> — John Lennon, a few hours before he was murdered.</p>
                                         <ul class="list-inline">
                                             <li class="list-inline-item">
                                                 <a class="social-icon text-xs-center" target="_blank" href="https://github.com/jgathje">

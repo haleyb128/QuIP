@@ -84,6 +84,11 @@ $(document).ready(function () {
 
         })
     })
+    $(".categories").on("click", function(event){
+        event.preventDefault();
+        let search = $(this).data("id");
+        window.location.href = "/" + search
+    })
     randomQuote();
 
 })

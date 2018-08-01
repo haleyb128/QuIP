@@ -57,6 +57,21 @@ module.exports = function (app) {
         });
     });
 
+    app.get('/api/tagSearch', function(dbQuotes) {
+        res.json(dbQuotes);
+     });
+   
+   // app.get("/api/quotes/:category", function (req, res) {
+   //     var query = {};
+   // if (req.query.quotes) {
+   //   query.quotes = req.query.category;
+   // }
+   //     db.quotes.findAll({
+   //         where: query 
+   //     }).then(function (dbquotes) {
+   //         res.json(dbquotes);
+   //     });
+   // });
     
 }
 // let array = req.body;

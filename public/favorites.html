@@ -4,23 +4,23 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>About Us</title>
+    <title>Favorites</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
-
+    <!-- ==================================================================================================================
+Nav Bar ======================================================================================================
+================================================================================================================== -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="./home.html">
+        <a class="navbar-brand" href="#">
             <img class="logo" src="./transparentQ.png" height="70">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false"
@@ -28,10 +28,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar1">
+
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="./home.html">Home
-                        <span class="sr-only"></span>
+                        <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
@@ -42,6 +43,7 @@
                     <ul id="login-dp" class="dropdown-menu">
                         <li>
                             <div class="row">
+
                                 <div class="col-md-12">
                                     Login
                                     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
@@ -58,7 +60,7 @@
                                         </div>
                                     </form>
                                     <div class="bottom text-center">
-                                        <a href="#">
+                                        <a href="./signUp.html">
                                             <b>Sign Up</b>
                                         </a>
                                     </div>
@@ -76,47 +78,168 @@
     </nav>
 
 
+    <section id="team" class="pb-5">
+        <div class="container">
+            <h5 class="section-title h1">YOUR FAVORITES</h5>
+            <div class="row">
 
+                <!-- ./Quote -->
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card">
+                                    <div class="card-body text-center">
 
-
-    
-    <!-- favorite quote -->
-    <div class="container">
-        <div class="row">
-            <div class="cours2" style="overflow:hidden;">
-                <img class="hover" src="https://cdn.shutterstock.com/shutterstock/videos/5276318/thumb/1.jpg" style="width:100%;height:200px;border:1px solid transparent;transition:1s;">
-                <div class="cours3">
-                    <h2 style="text-align:center;margin-top:-6px;color:rgb(237,78,110);">Serena Williams</h2>
-                    <h6 style="text-align:center;">"A champion is defined not by their wins but by how they can recover when they fall."</h6>
-
+                                        <br>
+                                        <br>
+                                        <h4 class="card-title">YOUR QUOTE HERE</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card">
+                                    <div class="card-body text-center mt-4">
+                                        <h4 class="card-title"></h4>
+                                        <p class="card-text">MORE QUOTES BY THIS AUTHOR?</p>
+                                        <button class="button">
+                                            <span>CLICK ME</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="cours4 text-center">
+                <!-- ./Quote -->
+                <!-- ./Quote -->
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card">
+                                    <div class="card-body text-center">
 
-                    <button class="cou" style="border:1px solid transparent;padding:10px 20px ;font-size:16px;border-radius:10%;background-color:rgb(237,78,110);color:white;">more quotes by this author</button>
-
+                                        <br>
+                                        <br>
+                                        <h4 class="card-title">YOUR QUOTE HERE</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card">
+                                    <div class="card-body text-center mt-4">
+                                        <h4 class="card-title"></h4>
+                                        <p class="card-text">MORE QUOTES BY THIS AUTHOR?</p>
+                                        <button class="button">
+                                            <span>CLICK ME</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- ./Quote -->
+                <!-- ./Quote -->
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card">
+                                    <div class="card-body text-center">
 
-            </div>
-        </div>
-    </div>
+                                        <br>
+                                        <br>
+                                        <h4 class="card-title">YOUR QUOTE HERE</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card">
+                                    <div class="card-body text-center mt-4">
+                                        <h4 class="card-title"></h4>
+                                        <p class="card-text">MORE QUOTES BY THIS AUTHOR?</p>
+                                        <button class="button">
+                                            <span>CLICK ME</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./Quote -->
+                <!-- ./Quote -->
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card">
+                                    <div class="card-body text-center">
+
+                                        <br>
+                                        <br>
+                                        <h4 class="card-title">YOUR QUOTE HERE</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card">
+                                    <div class="card-body text-center mt-4">
+                                        <h4 class="card-title"></h4>
+                                        <p class="card-text">MORE QUOTES BY THIS AUTHOR?</p>
+                                        <button class="button">
+                                            <span>CLICK ME</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./Quote -->
+                <!-- ./Quote -->
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card">
+                                    <div class="card-body text-center">
+
+                                        <br>
+                                        <br>
+                                        <h4 class="card-title">YOUR QUOTE HERE</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card">
+                                    <div class="card-body text-center mt-4">
+                                        <h4 class="card-title"></h4>
+                                        <p class="card-text">MORE QUOTES BY THIS AUTHOR?</p>
+                                        <button class="button">
+                                            <span>CLICK ME</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./Quote -->
 
 
 
-
-
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+                <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                    crossorigin="anonymous"></script> -->
+                <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                    crossorigin="anonymous"></script> -->
 </body>
 
 </html>

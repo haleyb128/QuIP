@@ -98,7 +98,7 @@ $(document).ready(function () {
                 backAuthor.addClass("button")
                 backAuthor.attr("id", "back-author-" + i + divID)
                 let backSpan = $("<span>")
-                backSpan.text("Click me!")
+                backSpan.text("Click to get similar quotes")
                 backSpan.attr("id", "demo1 " + i + divID)
                 $("#new-div-" + divID).append(subDiv9)
                 $("#subdiv9-" + i + divID).append(subDiv1)

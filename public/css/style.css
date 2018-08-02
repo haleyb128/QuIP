@@ -721,6 +721,7 @@ text-decoration: none;
 text-decoration: underline;
 }
 
+/* ===================================================Login navbar================================================== */
 
 .dropdown-menu.show {
   color: black;
@@ -827,3 +828,8 @@ span:active {
   opacity: 1;
 }
 
+.white-text {
+  color: salmon;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 32px;
+}

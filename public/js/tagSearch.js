@@ -1,7 +1,7 @@
 $(document).ready(function () {
     let divID = 0;
-    let i=0;
-    let k=2
+    let i = 0;
+    let k = 2
     let loginID = localStorage.getItem("id")
     let search = localStorage.getItem("category")
     console.log(search)
@@ -28,6 +28,7 @@ $(document).ready(function () {
         event.preventDefault();
         localStorage.clear();
         localStorage.setItem("id", "0");
+        localStorage.setItem("category", search)
         location.reload();
     })
     function searchQuotes() {
@@ -39,7 +40,7 @@ $(document).ready(function () {
             newDiv.addClass("row")
             newDiv.attr("id", "new-div-" + divID)
             $("#quote-container").append(newDiv)
-            if (k > data.length){
+            if (k > data.length) {
                 $("#load-more").hide()
                 $("#load").text("That's all the " + search + " quotes we have!")
             }
@@ -117,5 +118,51 @@ $(document).ready(function () {
         event.preventDefault();
         k = k + 2
         searchQuotes();
+    })
+    $("#userSubmit").on("click", function (event) {
+        event.preventDefault();
+        let userName = $("#exampleInputEmail2").val().trim();
+        let password = $("#exampleInputPassword2").val().trim();
+        let compareName;
+        let comparePass;
+        let id;
+        let userObj = {
+            id: "",
+            name: "",
+            password: "",
+        };
+        console.log(userName + " " + password)
+        $.get("/api/signin", function (data) {
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].name === userName) {
+                    id = data[i].id;
+                    compareName = data[i].name;
+                    comparePass = data[i].password;
+                    userObj = {
+                        id: id,
+                        name: compareName,
+                        password: comparePass
+                    }
+                    console.log(userObj)
+                    return userObj;
+                }
+            }
+        }).then(function () {
+            console.log(userObj)
+            if (userObj.name === userName && userObj.password === password) {
+                localStorage.clear();
+                localStorage.setItem("id", userObj.id);
+                localStorage.setItem("category", search)
+                console.log("Succes!!")
+                location.reload();
+            }
+            else if (userObj.name != userName) {
+                alert("WRONG NAME")
+            }
+            else if (userObj.password != password) {
+                alert("WRONG PASSWORD")
+            }
+
+        })
     })
 })

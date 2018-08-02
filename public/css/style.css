@@ -141,14 +141,14 @@ section .section-title {
 .frontside .card,
 .backside .card {
     min-height: 312px;
-    min-width: 180px;
+    min-width: 540px;
 
 }
 
 .backside .card a {
     font-size: 18px;
     color: rgb(95, 172, 113) !important;
-    min-width: 180px;
+    min-width: 540px;
 
 }
 
@@ -159,16 +159,12 @@ section .section-title {
     font-size: 60px;
     background-color: white;
     opacity: 0.9;
-    min-width: 180px;
-
 }
 
 .frontside .card .card-body img {
     width: 180px;
     height: 180px;
     border-radius: 90%;
-    min-width: 180px;
-
 }
 /* ==================================================================================================================
 Search Buttons ======================================================================================================
@@ -472,19 +468,30 @@ Sign Up Form ===================================================================
   text-decoration: underline;
 }
 
+#joeBackCard{
+  min-width: 540px;
+}
 
 #joePic {
   width: 10px;
   height: 180px;
   border-radius: 90%;
   min-width: 170px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(80%);
 }
 
-#joeBackCard{
-  min-width: 540px;
+#andrewPic {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(80%);
 }
 
-img {
+#daniPic {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(80%);
+}
+
+#haleyPic {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(80%);
 }

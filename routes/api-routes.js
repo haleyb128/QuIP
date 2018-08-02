@@ -13,13 +13,13 @@ module.exports = function (app) {
     });
 
     app.get('/api/signin', function (req, res) {
-        db.User.findAll().then(function (data){
+        db.User.findAll().then(function (data) {
             res.json(data);
         });
     });
 
-    app.post("/api/createuser", function(req,res){
-        db.User.create(req.body).then(function(data){
+    app.post("/api/createuser", function (req, res) {
+        db.User.create(req.body).then(function (data) {
             res.json(data)
         })
     })
@@ -57,22 +57,21 @@ module.exports = function (app) {
         });
     });
 
-    app.get('/api/tagSearch', function(dbQuotes) {
+    app.get('/api/tagSearch', function (dbQuotes) {
         res.json(dbQuotes);
-     });
-   
-   // app.get("/api/quotes/:category", function (req, res) {
-   //     var query = {};
-   // if (req.query.quotes) {
-   //   query.quotes = req.query.category;
-   // }
-   //     db.quotes.findAll({
-   //         where: query 
-   //     }).then(function (dbquotes) {
-   //         res.json(dbquotes);
-   //     });
-   // });
-    
+    });
+
+    app.get("/api/quotes/:category", function (req, res) {
+        let query = req.params.category
+        db.Quote.findAll({
+            where: {
+                Category: query
+            }
+        }).then(function (dbquotes) {
+            res.json(dbquotes);
+        });
+    });
+
 }
 // let array = req.body;
 // array.forEach(function(element){

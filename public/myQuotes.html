@@ -14,7 +14,7 @@
         crossorigin="anonymous">
 </head>
 
-<body class="add-quote-body">
+<body>
     <!-- ==================================================================================================================
 Nav Bar ======================================================================================================
 ================================================================================================================== -->
@@ -104,78 +104,91 @@ Nav Bar ========================================================================
     <!-- ==================================================================================================================
 Add Form ======================================================================================================
 ================================================================================================================== -->
-    <div class='add-container'>
-        <div class='container_inner'>
-            <h1>Add a Quote</h1>
-            <br>
-            <fieldset>
-                <div class='kickass_field'>
-                    <input maxlength='1000' minlength="1" required='required' id="add-body">
-                    <lable>
-                        Quote
-                        <span>full quote</span>
-                    </lable>
+
+    <div class="container">
+        <div class="my-quotes">
+            <ul class="list-group my-quotes-list">
+                <li class="list-group-item">
+                    <p class="mb-1">quote body</p>
+                    <h5 class="mb-1">author name</h5>
+                </li>
+                <li class="list-group-item">
+                    <p class="mb-1">quote body</p>
+                    <h5 class="mb-1">author name</h5>
+                </li>
+            </ul>
+        </div>
+        <hr>
+    <div class="add-quote-body">
+        <div class='add-container'>
+            <div class='container-inner'>
+                <h1>Add a Quote</h1>
+                <br>
+                <fieldset>
+                    <div class='kickass_field'>
+                        <input maxlength='100' required='required' id="add-author">
+                        <lable>
+                            Author
+                            <span>name</span>
+                        </lable>
+                    </div>
+                    <div class='kickass_field'>
+                        <input maxlength='1000' required='required' id="add-body">
+                        <lable>
+                            Quote
+                            <span>full quote</span>
+                        </lable>
+                    </div>
+                    <div class='kickass_field'>
+                        <input maxlength='100' required='required' id="add-author">
+                        <lable>
+                            Author
+                            <span>name</span>
+                        </lable>
+                    </div>
+                    <div class='kickass_field'>
+                        <select id="select-category" required='required'>
+                            <option>Life</option>
+                            <option>Love</option>
+                            <option>Death</option>
+                            <option>Inspiration</option>
+                            <option>Happiness</option>
+                            <option>Humor</option>
+                            <option>Hope</option>
+                            <option>Motivation</option>
+                            <option>Friendship</option>
+                        </select>
+                        <label for="select-category">
+                            Category
+                            <span>Choose 1</span>
+                        </label>
+                    </div>
+                    <div class='kickass_field'>
+                        <select id="select-subcategory" required='required'>
+                            <option>Life</option>
+                            <option>Love</option>
+                            <option>Death</option>
+                            <option>Inspiration</option>
+                            <option>Happiness</option>
+                            <option>Humor</option>
+                            <option>Hope</option>
+                            <option>Motivation</option>
+                            <option>Friendship</option>
+                        </select>
+                        <label for="select-subcategory">
+                            Sub-Category
+                            <span>Choose 1</span>
+                        </label>
+                    </div>
+                    <button id="addQuote">Add Quote</button>
+                </fieldset>
+                </br>
+                <div class="add-logo">
+                    <img class="logo" src="./transparentFull.png" height="70">
                 </div>
-                <div class='kickass_field'>
-                    <input maxlength='100' minlength="1" required='required' id="add-author">
-                    <lable>
-                        Author
-                        <span>name</span>
-                    </lable>
-                </div>
-                <div class='kickass_field'>
-                    <select id="select-category" required='required'>
-                        <option>Life</option>
-                        <option>Love</option>
-                        <option>Death</option>
-                        <option>Inspiration</option>
-                        <option>Happiness</option>
-                        <option>Humor</option>
-                        <option>Hope</option>
-                        <option>Motivation</option>
-                        <option>Friendship</option>
-                    </select>
-                    <label for="select-category">
-                        Category
-                        <span>Choose 1</span>
-                    </label>
-                </div>
-                <div class='kickass_field'>
-                    <select id="select-subcategory" required='required'>
-                        <option>Life</option>
-                        <option>Love</option>
-                        <option>Death</option>
-                        <option>Inspiration</option>
-                        <option>Happiness</option>
-                        <option>Humor</option>
-                        <option>Hope</option>
-                        <option>Motivation</option>
-                        <option>Friendship</option>
-                    </select>
-                    <label for="select-subcategory">
-                        Sub-Category
-                        <span>Choose 1</span>
-                    </label>
-                </div>
-                <button id="addQuote">Add Quote</button>
-            </fieldset>
-            </br>
-            <div class="add-logo">
-                <img class="logo" src="./transparentFull.png" height="70">
             </div>
         </div>
     </div>
-    <div class="my-quotes">
-        <ul class="list-group my-quotes-list">
-            <li class="list-group-item">
-                <p class="mb-1">quote body</p>
-                <h5 class="mb-1">author name</h5>
-            </li>
-            <li class="list-group-item">
-                <p class="mb-1">quote body</p>
-                <h5 class="mb-1">author name</h5>
-            </li>
-        </ul>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -212,4 +225,3 @@ Add Form =======================================================================
 </body>
 
 </html>
-

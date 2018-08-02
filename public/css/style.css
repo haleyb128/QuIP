@@ -549,8 +549,9 @@ Add Form =======================================================================
   font-family: "Lato", sans-serif;
   text-align: center;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   margin: 0;
+  clear: both;
 }
 .add-quote-body fieldset {
 border: none;
@@ -687,8 +688,8 @@ padding: 40px;
 box-sizing: border-box;
 /* --- End template styling --- */
 }
-.container_inner {
-position: absolute;
+.container-inner {
+position: relative;
 left: 0;
 right: 0;
 top: 50%;
@@ -699,7 +700,7 @@ top: 50%;
 font-weight: 300;
 }
 .add-container h1 {
-margin: 0;
+/* margin: 0; */
 color: #6E738A;
 }
 .add-container p {

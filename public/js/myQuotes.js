@@ -86,8 +86,26 @@ $(document).ready(function () {
             Category: cat,
             Subcategory: subCat,
             UserId: loginID
-        }).then(function(){
+        }).then(function () {
             location.reload();
         })
     })
+    function getUserQuotes() {
+        $.get("/api/quotes/" + loginID, function(data){
+            for (let i=0; i < data.length; i++){
+                let newli = $("<li>")
+                newli.addClass("list-group-item")
+                newli.attr("id", "user-quote" + i)
+                let newp = $("<p>")
+                newp.addClass("mb-1")
+                newp.text(data[i].Quote)
+                newli.append(newp)
+                let newh5 = $("<h5>")
+                newh5.addClass("mb-1")
+                newh5.text(data[i].Author)
+                newli.append(newh5)
+                $("#user-quotes").append(newli)
+            }
+        })}
+    getUserQuotes();
 })

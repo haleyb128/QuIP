@@ -23,7 +23,16 @@ module.exports = function (app) {
             res.json(data)
         })
     })
-
+    app.get("/api/quotes/:id", function(req,res){
+        let query = req.params.id
+        db.Quote.findAll({
+            where: {
+                UserId: query
+            }
+        }).then(function(quotes){
+            res.json(quotes)
+        })
+    })
     //add favorites to username profile
     app.get("/api/favorites/:username", function (req, res) {
         let query = parseInt(req.params.username)

@@ -63,10 +63,10 @@ $(document).ready(function () {
 
             }
             else if (userObj.name != userName) {
-                alert("WRONG NAME")
+                $('#userModal').modal("show")
             }
             else if (userObj.password != password) {
-                alert("WRONG PASSWORD")
+                $('#passwordModal').modal("show")
             }
         })
     })
@@ -121,7 +121,7 @@ $(document).ready(function () {
         $.ajax({
             url: '/api/destroy/' + destroyId,
             type: 'DELETE',
-            success: function(result) {
+            success: function (result) {
                 console.log(result)
                 location.reload();
             }

@@ -58,10 +58,12 @@ Nav Bar ========================================================================
                                         <div class="form-group">
                                             <label class="sr-only" for="exampleInputEmail2">Username</label>
                                             <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Username" required>
+                                            <p id="wrongname"></p>
                                         </div>
                                         <div class="form-group">
                                             <label class="sr-only" for="exampleInputPassword2">Password</label>
                                             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                            <p id="wrongpassword"></p>
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-secondary btn-block" id="userSubmit">Sign in</button>
@@ -185,71 +187,38 @@ Featured Quote =================================================================
                         </div>
                     </div>
                 </div>
-
-
-                <!-- ==================================================================================================================
-Login Modal ======================================================================================================
-================================================================================================================== -->
-
-                <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
+                <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                                <h5 class="modal-title" id="exampleModalCenterTitle">Username Incorrect</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="username" class="col-form-label">Username</label>
-                                        <input type="text" class="form-control" id="username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                    </div>
-                                </form>
+                                Please enter a valid username
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary">Sign Up</button>
-                                <button type="submit" class="btn btn-primary">Log In</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- ==================================================================================================================
-Sign Up Modal ====================================================================================================
-================================================================================================================== -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
+                <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+                                <h5 class="modal-title" id="exampleModalCenterTitle">Password Incorrect</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="email" class="col-form-label">Email</label>
-                                        <input type="text" class="form-control" id="email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="col-form-label">Username</label>
-                                        <input type="text" class="form-control" id="username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                    </div>
-                                </form>
+                                Please enter a valid password
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary">I already have an account</button>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>

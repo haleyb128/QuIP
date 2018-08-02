@@ -14,11 +14,9 @@
 </head>
 
 <body>
-
     <!-- ==================================================================================================================
 Nav Bar ======================================================================================================
 ================================================================================================================== -->
-
     <style>
         body {
             background-image: url("http://media.lily.fi/sites/lily/files/layout/header/33559/marmori_1.jpg") !important;
@@ -27,7 +25,6 @@ Nav Bar ========================================================================
             background-attachment: fixed;
             background-position: top;
         }
-
 
         .click {
             font-size: 33px;
@@ -123,193 +120,6 @@ Nav Bar ========================================================================
             opacity: 1;
         }
     </style>
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="./home.html">
-            <img class="logo" src="./transparentQ.png" height="70">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar1">
-
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="./home.html">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item dropleft">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                        <b id="userState">Login</b>
-                        <span class="caret"></span>
-                    </a>
-                    <ul id="login-dp" class="dropdown-menu">
-                        <li>
-                            <div class="row" id="userStateIn">
-
-                                <div class="col-md-12">
-                                    Login
-                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                        <div class="form-group">
-                                            <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-secondary btn-block" id="userSubmit">Sign in</button>
-                                        </div>
-                                        <div class="fav-btn">
-                                            <span href="" class="favme dashicons dashicons-heart"></span>
-                                        </div>
-                                        <div class="fav-btn">
-                                            <span href="" class="favme dashicons dashicons-heart"></span>
-                                        </div>
-                                    </form>
-                                    <div class="bottom text-center">
-                                        <a href="./signUp.html">
-                                            <b>Sign Up</b>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row" id="userStateOut">
-                                <div class="col-md-12">
-                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-secondary btn-block" id="logOut">Log Out</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./favorites.html">Favorites</a>
-                    </li>
-
-            </ul>
-        </div>
-    </nav>
-    <!-- ==================================================================================================================
- Results ======================================================================================================
-================================================================================================================== -->
-
-    <section id="searchResults" class="pb-5">
-        <div class="container" id="quote-container">
-            <h5 class="section-title h1">Search Results</h5>
-        </div>
-        <div class="container" id="load">
-
-            <button class="button" id="load-more">
-                <p>CLICK ME</p>
-            </button>
-        </div>
-    </section>
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-=======
-        .click {
-                font-size: 33px;
-                color: rgba(0,0,0,.5);
-                width: 38px;
-                height: 38px;
-                margin: 40px;
-                position: relative;
-                cursor: pointer;
-                transition: all .32s ease;
-                float: right;
-            }
-
-            .click span {
-                margin-left: 4px;
-                margin-top: 3px;
-                z-index: 999;
-                position: absolute;
-            }
-
-            span:hover {
-                opacity: 0.8;
-            }
-
-            span:active {
-                transform: scale(0.93,0.93) translateY(2px)
-            }
-
-            .ring, .ring2 {
-                opacity: 0;
-                background: grey;
-                width: 1px;
-                height: 1px;
-                position: absolute;
-                top: 19px;
-                left: 18px;
-                border-radius: 50%;
-                cursor: pointer;
-            }
-
-            .active span, .active-2 span {
-                color: #F5CC27 !important;
-            }
-
-            .active-2 .ring {
-                width: 58px !important;
-                height: 58px !important;
-                top: -10px !important;
-                left: -10px !important;
-                position: absolute;
-                border-radius: 50%;
-                opacity: 1 !important;
-            }
-
-            .active-2 .ring {
-                background: #F5CC27 !important;
-            }
-
-            .active-2 .ring2 {
-                background: #fff !important;
-            }
-
-            .active-3 .ring2 {
-                width: 60px !important;
-                height: 60px !important;
-                top: -11px !important;
-                left: -11px !important;
-                position: absolute;
-                border-radius: 50%;
-                opacity: 1 !important;
-            }
-
-            .info {
-                font-family: 'Open Sans', sans-serif;
-                font-size: 12px;
-                font-weight: 600;
-                text-transform: uppercase;
-                white-space: nowrap;
-                color: grey;
-                position: relative;
-                top: 30px;
-                left: -46px;
-                opacity: 0;
-                transition: all 0.3s ease;
-            }
-
-            .info-tog {
-                color: #F5CC27;
-                position: relative;
-                top: 45px;
-                opacity: 1;
-            }
-    </style>
-
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="./home.html">
             <img class="logo" src="./transparentQ.png" height="70">
@@ -319,7 +129,6 @@ Nav Bar ========================================================================
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar1">
-
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="./home.html">Home
@@ -334,7 +143,6 @@ Nav Bar ========================================================================
                     <ul id="login-dp" class="dropdown-menu">
                         <li>
                             <div class="row" id="userStateIn">
-
                                 <div class="col-md-12">
                                     Login
                                     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
@@ -380,55 +188,50 @@ Nav Bar ========================================================================
                     <li class="nav-item">
                         <a class="nav-link" href="./favorites.html">Favorites</a>
                     </li>
-
             </ul>
         </div>
     </nav>
     <!-- ==================================================================================================================
  Results ======================================================================================================
 ================================================================================================================== -->
-
     <section id="searchResults" class="pb-5">
         <div class="container" id="quote-container">
             <h5 class="section-title h1">Search Results</h5>
         </div>
         <div class="container" id="load">
-
-
-            <button class="button" id="load-more">
+            <button class="button">
                 <p>CLICK ME</p>
             </button>
-
         </div>
     </section>
     <script>
-        $('.click').click(function() {
-        if ($('span').hasClass("fa-star")) {
+        $('.click').click(function () {
+            if ($('span').hasClass("fa-star")) {
                 $('.click').removeClass('active')
-            setTimeout(function() {
-                $('.click').removeClass('active-2')
-            }, 30)
+                setTimeout(function () {
+                    $('.click').removeClass('active-2')
+                }, 30)
                 $('.click').removeClass('active-3')
-            setTimeout(function() {
-                $('span').removeClass('fa-star')
-                $('span').addClass('fa-star-o')
-            }, 15)
-        } else {
-            $('.click').addClass('active')
-            $('.click').addClass('active-2')
-            setTimeout(function() {
-                $('span').addClass('fa-star')
-                $('span').removeClass('fa-star-o')
-            }, 150)
-            setTimeout(function() {
-                $('.click').addClass('active-3')
-            }, 150)
-            $('.info').addClass('info-tog')
-            setTimeout(function(){
-                $('.info').removeClass('info-tog')
-            },1000)
-        }
-    })
+                setTimeout(function () {
+                    $('span').removeClass('fa-star')
+                    $('span').addClass('fa-star-o')
+                }, 15)
+            } else {
+                $('.click').addClass('active')
+                $('.click').addClass('active-2')
+                setTimeout(function () {
+                    $('span').addClass('fa-star')
+                    $('span').removeClass('fa-star-o')
+                }, 150)
+                setTimeout(function () {
+                    $('.click').addClass('active-3')
+                }, 150)
+                $('.info').addClass('info-tog')
+                setTimeout(function () {
+                    $('.info').removeClass('info-tog')
+                }, 1000)
+            }
+        })
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -438,4 +241,4 @@ Nav Bar ========================================================================
     <script src="js/tagSearch.js"></script>
 </body>
 
-</html>
+</html>s

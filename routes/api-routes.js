@@ -26,17 +26,17 @@ module.exports = function (app) {
 
     //add favorites to username profile
     app.get("/api/favorites/:username", function (req, res) {
-        let query = req.params.username
+        let query = parseInt(req.params.username)
         db.Favorite.findAll({
             where: {
-                UserId: query
+                LoginId: query
             }
         }).then(function (dbquotes) {
             res.json(dbquotes);
         });
     });
     app.delete("/api/favorites/:username", function (req, res) {
-        db.Favorites.destroy({
+        db.Favorite.destroy({
             where: {
                 id: req.params.id
             },
@@ -50,7 +50,16 @@ module.exports = function (app) {
             res.json(data)
         })
     })
-
+    app.post("/api/addquote", function (req, res) {
+        db.Quote.create(req.body).then(function (data) {
+            res.json(data)
+        })
+    })
+    app.get("/api/addquote/:id", function(req,res){
+        db.Quote.findAll({
+            where
+        })
+    })
     app.get("/api/quotes/:category", function (req, res) {
         let query = req.params.category
         db.Quote.findAll({

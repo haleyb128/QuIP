@@ -91,8 +91,8 @@ $(document).ready(function () {
         })
     })
     function getUserQuotes() {
-        $.get("/api/quotes/" + loginID, function(data){
-            for (let i=0; i < data.length; i++){
+        $.get("/api/quotes/" + loginID, function (data) {
+            for (let i = 0; i < data.length; i++) {
                 let newli = $("<li>")
                 newli.addClass("list-group-item")
                 newli.attr("id", "user-quote" + i)
@@ -104,8 +104,27 @@ $(document).ready(function () {
                 newh5.addClass("mb-1")
                 newh5.text(data[i].Author)
                 newli.append(newh5)
+                let newbutton = $("<button>")
+                newbutton.addClass("destroy")
+                newbutton.attr("data-id", data[i].id)
+                newbutton.text("Delete this quote")
+                newli.append(newbutton)
                 $("#user-quotes").append(newli)
             }
-        })}
+        })
+    }
     getUserQuotes();
+
+    $(".my-quotes-list").on("click", ".destroy", function (event) {
+        event.preventDefault();
+        let destroyId = $(this).data("id")
+        $.ajax({
+            url: '/api/destroy/' + destroyId,
+            type: 'DELETE',
+            success: function(result) {
+                console.log(result)
+                location.reload();
+            }
+        });
+    })
 })

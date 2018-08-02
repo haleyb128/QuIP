@@ -548,9 +548,9 @@ Add Form =======================================================================
 .add-quote-body {
   font-family: "Lato", sans-serif;
   text-align: center;
-  height: 100vh;
+  height: 150vh;
   overflow: auto;
-  margin: 0;
+  margin: 20px;
   clear: both;
 }
 .add-quote-body fieldset {
@@ -684,7 +684,7 @@ color: #6E738A;
 background: #f9f9f9;
 height: 100%;
 border: 14px solid white;
-padding: 40px;
+padding: 20px;
 box-sizing: border-box;
 /* --- End template styling --- */
 }
@@ -692,7 +692,7 @@ box-sizing: border-box;
 position: relative;
 left: 0;
 right: 0;
-top: 50%;
+top: 45%;
 -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
 }
@@ -700,7 +700,7 @@ top: 50%;
 font-weight: 300;
 }
 .add-container h1 {
-/* margin: 0; */
+margin: 0;
 color: #6E738A;
 }
 .add-container p {
@@ -729,6 +729,10 @@ text-decoration: underline;
   padding-top: 15px;
   padding-right: 15px;
   padding-bottom: 0px;
+}
+.my-quotes {
+  margin: 20px;
+  padding: 20px;
 }
 
 =======

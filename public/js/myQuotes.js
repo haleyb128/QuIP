@@ -80,12 +80,12 @@ $(document).ready(function () {
         console.log(author)
         console.log(cat)
         console.log(subCat)
-        $.post("api/favorites", {
+        $.post("/api/addquote", {
             Quote: quote,
             Author: author,
             Category: cat,
             Subcategory: subCat,
-            LoginId: loginID
+            UserId: loginID
         }).then(function(){
             location.reload();
         })

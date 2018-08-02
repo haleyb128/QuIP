@@ -731,7 +731,6 @@ text-decoration: underline;
   padding-bottom: 0px;
 }
 
-=======
 .click {
   font-size: 33px;
   color: rgba(0,0,0,.5);
@@ -824,3 +823,8 @@ span:active {
   opacity: 1;
 }
 
+.white-text {
+  color: salmon;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 32px;
+}

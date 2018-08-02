@@ -19,21 +19,99 @@
 <!-- Quote Card Smaller-->
         
         <style>
-            .like-container{filter: url('#filter');}
-            .like-cnt{  
-            /* position: absolute; 
-            cursor: pointer;
-            left: 50%; 
-            top: 50%;  */
-            transform: translate(-50%, -50%);     background: rgba(255,255,255,0.3);     width: 60px; 
-            height: 60px;  
-            border-radius: 50%;
-            text-align: center;
-            line-height: 75px;
-            z-index: 10;
+            .click {
+                font-size: 33px;
+                color: rgba(0,0,0,.5);
+                width: 38px;
+                height: 38px;
+                margin: 0 auto;
+                margin-top: 20px;
+                position: relative;
+                cursor: pointer;
             }
-            .like-btn{
-            color: #fff;
+
+            .click span {
+                margin-left: 4px;
+                margin-top: 3px;
+                z-index: 999;
+                position: absolute;
+            }
+
+            span:hover {
+                opacity: 0.8;
+            }
+
+            span:active {
+                transform: scale(0.93,0.93) translateY(2px)
+            }
+
+            .ring, .ring2 {
+                opacity: 0;
+                background: grey;
+                width: 1px;
+                height: 1px;
+                position: absolute;
+                top: 19px;
+                left: 18px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            .active span, .active-2 span {
+                color: #F5CC27 !important;
+            }
+
+            .active-2 .ring {
+                width: 58px !important;
+                height: 58px !important;
+                top: -10px !important;
+                left: -10px !important;
+                position: absolute;
+                border-radius: 50%;
+                opacity: 1 !important;
+            }
+
+            .active-2 .ring {
+                background: #F5CC27 !important;
+            }
+
+            .active-2 .ring2 {
+                background: #fff !important;
+            }
+
+            .active-3 .ring2 {
+                width: 60px !important;
+                height: 60px !important;
+                top: -11px !important;
+                left: -11px !important;
+                position: absolute;
+                border-radius: 50%;
+                opacity: 1 !important;
+            }
+
+            .info {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                white-space: nowrap;
+                color: grey;
+                position: relative;
+                top: 30px;
+                left: -46px;
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+
+            .info-tog {
+                color: #F5CC27;
+                position: relative;
+                top: 45px;
+                opacity: 1;
+            }
+
+            * {
+                transition: all .32s ease;
             }
         </style>
         <div class="col-xs-12 col-sm-6 col-md-6">
@@ -69,10 +147,13 @@
                                     <li>
                                         <a href="#" class="quoteSub" data-toggle="tooltip" data-placement="bottom" title="Sub Category"></a>
                                     </li>
-                                    <div class="like-cnt unchecked" id="like-cnt">
-                                        <i class="like-btn material-icons">thumb_up</i>
-                                    </div>
                                 </ul>
+                                <div class="click">
+                                    <span class="fa fa-star-o"></span>
+                                    <div class="ring"></div>
+                                    <div class="ring2"></div>
+                                    <p class="info">Added to favourites!</p>
+                                </div>
                                 <br>
                                 <!-- <div class="like-container"> -->
                                         <!-- <div class="like-cnt unchecked" id="like-cnt">
@@ -87,44 +168,33 @@
         </div>
 
         
-        <script>
-            var check_status = false;
-            var like_cnt = $("#like-cnt");
-            var like_parent = $(".like-container");
-
-            var burst = new mojs.Burst({
-            parent: like_parent,
-            radius:   { 20: 60 },
-            count: 15,
-            angle:{0:30},
-            children: {
-                delay: 250,
-                duration: 700,
-                radius:{10: 0},
-                fill:   [ '#ddca7e' ],
-                easing: 		mojs.easing.bezier(.08,.69,.39,.97)
-            }
-            });
-
-            $("#like-cnt").click(function(){
-            var t1 = new TimelineLite();
-            var t2 = new TimelineLite();
-            if(!check_status){
-                t1.set(like_cnt, {scale:0});
-                t1.set('.like-btn', {scale: 0});
-                t1.to(like_cnt, 0.6, {scale:1, background: '#ddca7e',ease: Expo.easeOut});
-                t2.to('.like-btn', 0.65, {scale: 1, ease: Elastic.easeOut.config(1, 0.3)}, '+=0.2');
-            //    t1.timeScale(5);
-                check_status=true;
-                //circleShape.replay();
-                burst.replay();
-            }
-            else{
-                t1.to(like_cnt, 1, {scale:1})
-                .to(like_cnt, 1, {scale:1, background: 'rgba(255,255,255,0.3)', ease: Power4.easeOut});
-                t1.timeScale(7);
-                check_status=false;
-            }
+        <script type="text/javascript">
+            $('.click').click(function() {
+                if ($('span').hasClass("fa-star")) {
+                        $('.click').removeClass('active')
+                    setTimeout(function() {
+                        $('.click').removeClass('active-2')
+                    }, 30)
+                        $('.click').removeClass('active-3')
+                    setTimeout(function() {
+                        $('span').removeClass('fa-star')
+                        $('span').addClass('fa-star-o')
+                    }, 15)
+                } else {
+                    $('.click').addClass('active')
+                    $('.click').addClass('active-2')
+                    setTimeout(function() {
+                        $('span').addClass('fa-star')
+                        $('span').removeClass('fa-star-o')
+                    }, 150)
+                    setTimeout(function() {
+                        $('.click').addClass('active-3')
+                    }, 150)
+                    $('.info').addClass('info-tog')
+                    setTimeout(function(){
+                        $('.info').removeClass('info-tog')
+                    },1000)
+                }
             })
         </script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"

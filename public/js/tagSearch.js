@@ -6,6 +6,7 @@ $(document).ready(function () {
     let search = localStorage.getItem("category")
     console.log(search)
     console.log(loginID)
+    $("#display-category").text(search + " Quotes")
     function loginCheck() {
         $.get("/api/signin", function (data) {
             for (let j = 0; j < data.length; j++) {
@@ -83,30 +84,22 @@ $(document).ready(function () {
                 subDiv8.addClass("card-body text center mt-4")
                 subDiv8.attr("id", "subdiv8-" + i + divID)
                 let backQuote = $("<p>")
-                backQuote.addClass("quote-body")
+                backQuote.addClass("card-text")
                 backQuote.text(data[i].Quote)
                 backQuote.attr("id", "back-quote-" + i + divID)
                 backQuote.append("<br>")
                 backQuote.append("<br>")
-                let backAuthor = $("<h4>")
-                backAuthor.addClass("card-title")
-                backAuthor.text(data[i].Author)
+                let backAuthor = $("<button>")
+                backAuthor.addClass("button")
+                backAuthor.attr("data-author", data[i].Author)
+                backAuthor.attr("data-quote", data[i].Quote)
+                backAuthor.attr("data-category", data[i].Category)
+                backAuthor.attr("data-subcat", data[i].Subcategory)
+                backAuthor.addClass("redirect")
                 backAuthor.attr("id", "back-author-" + i + divID)
-                let subDivFav = $("<div>")
-                subDivFav.addClass("click")
-                let favSpan = $("<span>")
-                favSpan.addClass("fa fa-star-o")
-                subDivFav.append(favSpan)
-                let favDiv1 = $("<div>")
-                favDiv1.addClass("ring")
-                subDivFav.append(favDiv1)
-                let favDiv2 = $("<div>")
-                favDiv2.addClass("ring2")
-                subDivFav.append(favDiv2)
-                let favP = $("<p>")
-                favP.addClass("info")
-                favP.text("Added to favorites")
-                subDivFav.append(favP)
+                let backSpan = $("<span>")
+                backSpan.text("Click to add to favorites")
+                backSpan.attr("id", "demo1 " + i + divID)
                 $("#new-div-" + divID).append(subDiv9)
                 $("#subdiv9-" + i + divID).append(subDiv1)
                 $("#subdiv1-" + i + divID).append(subDiv2)
@@ -120,7 +113,7 @@ $(document).ready(function () {
                 $("#subdiv7-" + i + divID).append(subDiv8)
                 $("#subdiv8-" + i + divID).append(backQuote)
                 $("#back-quote-" + i + divID).append(backAuthor)
-                $("#subdiv6-" + i + divID).append(subDivFav)
+                $("#back-author-" + i + divID).append(backSpan)
             }
         });
     }
@@ -130,18 +123,6 @@ $(document).ready(function () {
         k = k + 2
         searchQuotes();
     })
-    // $(document).on("scroll", function() {
-    //     console.log("scrolling")
-    //     if($(document).scrollTop() + $(document).innerHeight() >= $(document).scrollHeight){
-    //         alert("it works!")
-    //     }
-    // });
-    // $(window).on("scroll", function() {
-    //     console.log("scrolling")
-    //     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-    //         searchQuotes();
-    //     }
-    // });
     $("#userSubmit").on("click", function (event) {
         event.preventDefault();
         let userName = $("#exampleInputEmail2").val().trim();
@@ -187,5 +168,22 @@ $(document).ready(function () {
             }
 
         })
+    })
+    $("#quote-container").on("click", ".redirect", function (event) {
+        event.preventDefault();
+        let quote = $(this).data("quote")
+        let author = $(this).data("author")
+        let category = $(this).data("category")
+        let subcategory = $(this).data("subcat")
+       $.post("/api/favorites", {
+           Quote: quote,
+           Author: author,
+           Category: category,
+           Subcategory: subcategory,
+           UserId: loginID
+       }).then(function(res){
+           console.log(res)
+           
+       })
     })
 })

@@ -43,12 +43,11 @@ module.exports = function (app) {
             res.json(quotes)
         })
     })
-    //add favorites to username profile
     app.get("/api/favorites/:username", function (req, res) {
         let query = parseInt(req.params.username)
         db.Favorite.findAll({
             where: {
-                LoginId: query
+                UserId: query
             }
         }).then(function (dbquotes) {
             res.json(dbquotes);
@@ -64,7 +63,7 @@ module.exports = function (app) {
             res.json(dbFavorites);
         });
     });
-    app.post("/api/favorites", function (req, res) {
+    app.post("/api/favorites/", function (req, res) {
         db.Favorite.create(req.body).then(function (data) {
             res.json(data)
         })

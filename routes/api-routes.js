@@ -25,15 +25,14 @@ module.exports = function (app) {
     })
 
     //add favorites to username profile
-    app.get('/api/favorites/:username', function (req, res) {
-        var query = {};
-        if (req.query.username) {
-            query.users = req.query.username;
-        }
-        db.Favorites.findAll({
-            where: query
-        }).then(function (dbFavorites) {
-            res.json(dbFavorites);
+    app.get("/api/favorites/:username", function (req, res) {
+        let query = req.params.username
+        db.Favorite.findAll({
+            where: {
+                UserId: query
+            }
+        }).then(function (dbquotes) {
+            res.json(dbquotes);
         });
     });
     app.delete("/api/favorites/:username", function (req, res) {
@@ -46,20 +45,11 @@ module.exports = function (app) {
             res.json(dbFavorites);
         });
     });
-    app.post("/api/favorites/:username", function (req, res) {
-        const data = {
-            body: req.body.body,
-            AuthorID: req.body.AuthorID
-
-        }
-        db.Favorites.create(data).then(function (dbFavorites) {
-            res.json(dbFavorites);
-        });
-    });
-
-    app.get('/api/tagSearch', function (dbQuotes) {
-        res.json(dbQuotes);
-    });
+    app.post("/api/favorites", function (req, res) {
+        db.Favorite.create(req.body).then(function (data) {
+            res.json(data)
+        })
+    })
 
     app.get("/api/quotes/:category", function (req, res) {
         let query = req.params.category

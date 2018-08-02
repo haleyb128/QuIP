@@ -123,6 +123,7 @@ $(document).ready(function () {
         k = k + 2
         searchQuotes();
     })
+
     $("#userSubmit").on("click", function (event) {
         event.preventDefault();
         let userName = $("#exampleInputEmail2").val().trim();
@@ -168,4 +169,5 @@ $(document).ready(function () {
 
         })
     })
+
 })

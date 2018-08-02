@@ -61,12 +61,12 @@ module.exports = function (app) {
             res.json(dbquotes);
         });
     });
-
+    app.post("/api/joesmagicalroute", function (req, res) {
+        let array = req.body;
+        array.forEach(function (element) {
+            db.Quote.create(element).then(function (data) {
+                res.json(data)
+            })
+        });
+    })
 }
-// let array = req.body;
-// array.forEach(function(element){
-//     db.Quote.create(element).then(function(data){
-//         res.json(data)
-// })
-
-// })

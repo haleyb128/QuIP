@@ -105,7 +105,7 @@ $(document).ready(function () {
                 subDivFav.append(favDiv2)
                 let favP = $("<p>")
                 favP.addClass("info")
-                favP.text("Add to favorites")
+                favP.text("Added to favorites")
                 subDivFav.append(favP)
                 $("#new-div-" + divID).append(subDiv9)
                 $("#subdiv9-" + i + divID).append(subDiv1)

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>QuIP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -21,8 +21,18 @@
 Nav Bar ======================================================================================================
 ================================================================================================================== -->
 
+    <style>
+        body {
+            background-image: url("http://media.lily.fi/sites/lily/files/layout/header/33559/marmori_1.jpg") !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: top;
+        }
+    </style>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="./home.html">
             <img class="logo" src="./transparentQ.png" height="70">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false"
@@ -37,9 +47,9 @@ Nav Bar ========================================================================
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropleft">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                        <b id="userState"></b>
+                        <b id="userState">Login</b>
                         <span class="caret"></span>
                     </a>
                     <ul id="login-dp" class="dropdown-menu">
@@ -58,7 +68,10 @@ Nav Bar ========================================================================
                                             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block" id="userSubmit">Sign in</button>
+                                            <button type="submit" class="btn btn-secondary btn-block" id="userSubmit">Sign in</button>
+                                        </div>
+                                        <div class="fav-btn">
+                                            <span href="" class="favme dashicons dashicons-heart"></span>
                                         </div>
                                         <div class="fav-btn">
                                             <span href="" class="favme dashicons dashicons-heart"></span>
@@ -75,17 +88,20 @@ Nav Bar ========================================================================
                                 <div class="col-md-12">
                                     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block" id="logOut">Log Out</button>
+                                            <button type="submit" class="btn btn-secondary btn-block" id="logOut">Log Out</button>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </li>
                     </ul>
-
                     <li class="nav-item">
                         <a class="nav-link" href="./about.html">About Us</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./favorites.html">Favorites</a>
+                    </li>
+
             </ul>
         </div>
     </nav>
@@ -98,7 +114,9 @@ Nav Bar ========================================================================
             <h5 class="section-title h1">Search Results</h5>
         </div>
         <div class="container" id="load">
-        <button id="load-more">Load More</button>
+            <button class="button">
+                <span>CLICK ME</span>
+            </button>
         </div>
 </body>
 

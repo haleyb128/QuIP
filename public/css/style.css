@@ -525,7 +525,7 @@ img {
   top: var(--y);
   width: var(--size);
   height: var(--size);
-  background: radial-gradient(circle closest-side, #a5a5a5, transparent);
+  background: radial-gradient(circle closest-side, #ffffff, transparent);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   transition: width .2s ease, height .1s ease;
@@ -537,4 +537,3 @@ img {
 /*   ======================  button end  =========================== */
 
 /* login navbar */
-

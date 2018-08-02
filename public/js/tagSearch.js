@@ -32,7 +32,7 @@ $(document).ready(function () {
         location.reload();
     })
     function searchQuotes() {
-        searchQuery = "/api/quotes/" + search
+        searchQuery = "/api/categories/" + search
         console.log(searchQuery)
         $.get(searchQuery, function (data) {
             divID++;

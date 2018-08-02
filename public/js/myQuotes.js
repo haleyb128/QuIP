@@ -80,14 +80,51 @@ $(document).ready(function () {
         console.log(author)
         console.log(cat)
         console.log(subCat)
-        $.post("api/favorites", {
+        $.post("/api/addquote", {
             Quote: quote,
             Author: author,
             Category: cat,
             Subcategory: subCat,
-            LoginId: loginID
-        }).then(function(){
+            UserId: loginID
+        }).then(function () {
             location.reload();
         })
+    })
+    function getUserQuotes() {
+        $.get("/api/quotes/" + loginID, function (data) {
+            for (let i = 0; i < data.length; i++) {
+                let newli = $("<li>")
+                newli.addClass("list-group-item")
+                newli.attr("id", "user-quote" + i)
+                let newp = $("<p>")
+                newp.addClass("mb-1")
+                newp.text(data[i].Quote)
+                newli.append(newp)
+                let newh5 = $("<h5>")
+                newh5.addClass("mb-1")
+                newh5.text(data[i].Author)
+                newli.append(newh5)
+                let newbutton = $("<button>")
+                newbutton.addClass("destroy")
+                newbutton.attr("data-id", data[i].id)
+                newbutton.text("Delete this quote")
+                newli.append(newbutton)
+                $("#user-quotes").append(newli)
+            }
+        })
+    }
+    getUserQuotes();
+
+    $(".my-quotes-list").on("click", ".destroy", function (event) {
+        event.preventDefault();
+        let destroyId = $(this).data("id")
+        $.ajax({
+            url: '/api/destroy/' + destroyId,
+            type: 'DELETE',
+            success: function(result) {
+                console.log(result)
+                location.reload();
+            }
+        });
     })
 })

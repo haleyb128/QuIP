@@ -41,7 +41,7 @@ $(document).ready(function () {
             console.log(name)
             console.log(compareName)
             if (compareName === name) {
-                alert("Name taken!")
+                $('#nameTaken').modal("show")
             }
             else {
                 $.post("/api/createuser", {

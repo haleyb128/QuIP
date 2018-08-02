@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QuIP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body class="add-quote-body">
+    <!-- ==================================================================================================================
+Nav Bar ======================================================================================================
+================================================================================================================== -->
+    <style>
+        body {
+            background-image: url("http://media.lily.fi/sites/lily/files/layout/header/33559/marmori_1.jpg") !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: top;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="./transparentQ.png" height="70">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar1">
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./home.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item dropleft">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <b id="userState">Login</b>
+                        <span class="caret"></span>
+                    </a>
+                    <ul id="login-dp" class="dropdown-menu">
+                        <li>
+                            <div class="row" id="userStateIn">
+
+                                <div class="col-md-12">
+                                    Login
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-secondary btn-block" id="userSubmit">Sign in</button>
+                                        </div>
+                                        <div class="fav-btn">
+                                            <span href="" class="favme dashicons dashicons-heart"></span>
+                                        </div>
+                                        <div class="fav-btn">
+                                            <span href="" class="favme dashicons dashicons-heart"></span>
+                                        </div>
+                                    </form>
+                                    <div class="bottom text-center">
+                                        <a href="./signUp.html">
+                                            <b>Sign Up</b>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" id="userStateOut">
+                                <div class="col-md-12">
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-secondary btn-block" id="logOut">Log Out</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./favorites.html">Favorites</a>
+                    </li>
+    
+            </ul>
+        </div>
+    </nav>
+    <!-- ==================================================================================================================
+Add Form ======================================================================================================
+================================================================================================================== -->
+<div class='add-container'>
+    <div class='container_inner'>
+        <h1>Add a Quote</h1>
+        <br>
+        <fieldset>
+            <div class='kickass_field'>
+                <input maxlength='100' required='required' id="add-author">
+                <lable>
+                    Author
+                    <span>name</span>
+                </lable>
+            </div>
+            <div class='kickass_field'>
+                <input maxlength='1000' required='required' id="add-body">
+                <lable>
+                    Quote
+                    <span>full quote</span>
+                </lable>
+            </div>
+            <div class='kickass_field'>
+                <input maxlength='100' required='required' id="add-author">
+                <lable>
+                    Author
+                    <span>name</span>
+                </lable>
+            </div>
+            <div class='kickass_field'>
+                <select id="select-category" required='required'>
+                    <option>Life</option>
+                    <option>Love</option>
+                    <option>Death</option>
+                    <option>Inspiration</option>
+                    <option>Happiness</option>
+                    <option>Humor</option>
+                    <option>Hope</option>
+                    <option>Motivation</option>
+                    <option>Friendship</option>
+                </select>
+                <label for="select-category">
+                    Category
+                        <span>Choose 1</span>
+                </label>
+            </div>
+            <div class='kickass_field'>
+                <select id="select-subcategory" required='required'>
+                    <option>Life</option>
+                    <option>Love</option>
+                    <option>Death</option>
+                    <option>Inspiration</option>
+                    <option>Happiness</option>
+                    <option>Humor</option>
+                    <option>Hope</option>
+                    <option>Motivation</option>
+                    <option>Friendship</option>
+                </select>
+                <label for="select-subcategory">
+                    Sub-Category
+                        <span>Choose 1</span>
+                </label>
+            </div>
+            <button id="addQuote">Add Quote</button>
+        </fieldset>
+        </br>
+        <div class="add-logo">
+            <img class="logo" src="./transparentFull.png" height="70">
+        </div>
+    </div>
+</div>

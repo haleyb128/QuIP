@@ -824,3 +824,8 @@ span:active {
   opacity: 1;
 }
 
+.white-text {
+  color: salmon;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 32px;
+}

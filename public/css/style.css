@@ -829,3 +829,11 @@ span:active {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 32px;
 }
+.page-footer {
+  background-color: gainsboro;
+}
+#copyright {
+  color: salmon;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 22px;
+}

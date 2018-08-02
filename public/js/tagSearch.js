@@ -95,6 +95,7 @@ $(document).ready(function () {
                 backAuthor.attr("data-quote", data[i].Quote)
                 backAuthor.attr("data-category", data[i].Category)
                 backAuthor.attr("data-subcat", data[i].Subcategory)
+                backAuthor.attr("data-id", ""+ i + divID)
                 backAuthor.addClass("redirect")
                 backAuthor.attr("id", "back-author-" + i + divID)
                 let backSpan = $("<span>")
@@ -175,15 +176,21 @@ $(document).ready(function () {
         let author = $(this).data("author")
         let category = $(this).data("category")
         let subcategory = $(this).data("subcat")
-       $.post("/api/favorites", {
-           Quote: quote,
-           Author: author,
-           Category: category,
-           Subcategory: subcategory,
-           UserId: loginID
-       }).then(function(res){
-           console.log(res)
-           
-       })
+        let textId = $(this).data("id")
+        if (loginID == 0) {
+            $("#back-quote-" + textId).text("You must be logged in to add favorites")
+        }
+        else {
+            $.post("/api/favorites", {
+                Quote: quote,
+                Author: author,
+                Category: category,
+                Subcategory: subcategory,
+                UserId: loginID
+            }).then(function (res) {
+                console.log(res)
+
+            })
+        }
     })
 })

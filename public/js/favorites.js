@@ -42,14 +42,10 @@ $(document).ready(function () {
                 $("#load-more").hide()
                 $("#load").text("You haven't added any favorites!")
             }
-            else if (k > data.length) {
+            else if (k >= data.length) {
                 $("#load-more").hide()
-                $("#load").text("That's all of your favorite quotes!")
             }
             for (i; i < k; i++) {
-                // let newDiv = $("<div>")
-                // newDiv.addClass("row")
-                // newDiv.attr("id", "new-div-" + i)
                 let subDiv9 = $("<div>")
                 subDiv9.addClass("col-xs-12 col-sm-6 col-md-6")
                 subDiv9.attr("id", "subdiv9-" + i + divID)
@@ -90,12 +86,14 @@ $(document).ready(function () {
                 subDiv8.attr("id", "subdiv8-" + i + divID)
                 let backQuote = $("<p>")
                 backQuote.addClass("card-text")
-                backQuote.text("MORE QUOTES BY THIS AUTHOR?")
+                backQuote.text("Want more " + data[i].Category + "?")
                 backQuote.attr("id", "back-quote-" + i + divID)
                 backQuote.append("<br>")
                 backQuote.append("<br>")
                 let backAuthor = $("<button>")
                 backAuthor.addClass("button")
+                backAuthor.attr("data-id", data[i].Category)
+                backAuthor.addClass("redirect")
                 backAuthor.attr("id", "back-author-" + i + divID)
                 let backSpan = $("<span>")
                 backSpan.text("Click to get similar quotes")
@@ -169,5 +167,10 @@ $(document).ready(function () {
 
         })
     })
-
+    $("#quote-container").on("click", ".redirect", function (event) {
+        event.preventDefault();
+        let redirectId = $(this).data("id")
+        localStorage.setItem("category", redirectId)
+        window.location.href = "/" + redirectId
+    })
 })

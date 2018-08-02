@@ -142,14 +142,12 @@ section .section-title {
 .backside .card {
     min-height: 312px;
     min-width: 540px;
-
 }
 
 .backside .card a {
     font-size: 18px;
     color: rgb(95, 172, 113) !important;
-    min-width: 540px;
-
+    min-width: 540%;
 }
 
 .frontside .card .card-title,
@@ -721,6 +719,18 @@ text-decoration: none;
 .add-container a:hover {
 text-decoration: underline;
 }
+
+
+.dropdown-menu.show {
+  color: black;
+  text-align: center;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 0px;
+}
+
+=======
 .click {
   font-size: 33px;
   color: rgba(0,0,0,.5);
@@ -812,3 +822,4 @@ span:active {
   top: 45px;
   opacity: 1;
 }
+

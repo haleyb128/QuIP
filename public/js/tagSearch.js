@@ -40,14 +40,10 @@ $(document).ready(function () {
             newDiv.addClass("row")
             newDiv.attr("id", "new-div-" + divID)
             $("#quote-container").append(newDiv)
-            if (k > data.length) {
+            if (k >= data.length) {
                 $("#load-more").hide()
-                $("#load").text("That's all the " + search + " quotes we have!")
             }
             for (i; i < k; i++) {
-                // let newDiv = $("<div>")
-                // newDiv.addClass("row")
-                // newDiv.attr("id", "new-div-" + i)
                 let subDiv9 = $("<div>")
                 subDiv9.addClass("col-xs-12 col-sm-6 col-md-6")
                 subDiv9.attr("id", "subdiv9-" + i + divID)
@@ -96,7 +92,21 @@ $(document).ready(function () {
                 backAuthor.addClass("card-title")
                 backAuthor.text(data[i].Author)
                 backAuthor.attr("id", "back-author-" + i + divID)
-                // $("#quote-container").append(newDiv)
+                let subDivFav = $("<div>")
+                subDivFav.addClass("click")
+                let favSpan = $("<span>")
+                favSpan.addClass("fa fa-star-o")
+                subDivFav.append(favSpan)
+                let favDiv1 = $("<div>")
+                favDiv1.addClass("ring")
+                subDivFav.append(favDiv1)
+                let favDiv2 = $("<div>")
+                favDiv2.addClass("ring2")
+                subDivFav.append(favDiv2)
+                let favP = $("<p>")
+                favP.addClass("info")
+                favP.text("Add to favorites")
+                subDivFav.append(favP)
                 $("#new-div-" + divID).append(subDiv9)
                 $("#subdiv9-" + i + divID).append(subDiv1)
                 $("#subdiv1-" + i + divID).append(subDiv2)
@@ -110,6 +120,7 @@ $(document).ready(function () {
                 $("#subdiv7-" + i + divID).append(subDiv8)
                 $("#subdiv8-" + i + divID).append(backQuote)
                 $("#back-quote-" + i + divID).append(backAuthor)
+                $("#subdiv6-" + i + divID).append(subDivFav)
             }
         });
     }
@@ -119,6 +130,18 @@ $(document).ready(function () {
         k = k + 2
         searchQuotes();
     })
+    // $(document).on("scroll", function() {
+    //     console.log("scrolling")
+    //     if($(document).scrollTop() + $(document).innerHeight() >= $(document).scrollHeight){
+    //         alert("it works!")
+    //     }
+    // });
+    // $(window).on("scroll", function() {
+    //     console.log("scrolling")
+    //     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    //         searchQuotes();
+    //     }
+    // });
     $("#userSubmit").on("click", function (event) {
         event.preventDefault();
         let userName = $("#exampleInputEmail2").val().trim();
@@ -164,5 +187,32 @@ $(document).ready(function () {
             }
 
         })
+    })
+    $('.click').click(function () {
+        if ($('span').hasClass("fa-star")) {
+            $('.click').removeClass('active')
+            setTimeout(function () {
+                $('.click').removeClass('active-2')
+            }, 30)
+            $('.click').removeClass('active-3')
+            setTimeout(function () {
+                $('span').removeClass('fa-star')
+                $('span').addClass('fa-star-o')
+            }, 15)
+        } else {
+            $('.click').addClass('active')
+            $('.click').addClass('active-2')
+            setTimeout(function () {
+                $('span').addClass('fa-star')
+                $('span').removeClass('fa-star-o')
+            }, 150)
+            setTimeout(function () {
+                $('.click').addClass('active-3')
+            }, 150)
+            $('.info').addClass('info-tog')
+            setTimeout(function () {
+                $('.info').removeClass('info-tog')
+            }, 1000)
+        }
     })
 })

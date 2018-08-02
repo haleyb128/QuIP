@@ -720,7 +720,6 @@ text-decoration: none;
 text-decoration: underline;
 }
 
-/* ===================================================Login navbar================================================== */
 
 .dropdown-menu.show {
   color: black;
@@ -729,5 +728,98 @@ text-decoration: underline;
   padding-top: 15px;
   padding-right: 15px;
   padding-bottom: 0px;
+}
+
+=======
+.click {
+  font-size: 33px;
+  color: rgba(0,0,0,.5);
+  width: 38px;
+  height: 38px;
+  margin: 40px;
+  position: relative;
+  cursor: pointer;
+  transition: all .32s ease;
+  float: right;
+}
+
+.click span {
+  margin-left: 4px;
+  margin-top: 3px;
+  z-index: 999;
+  position: absolute;
+}
+
+span:hover {
+  opacity: 0.8;
+}
+
+span:active {
+  transform: scale(0.93,0.93) translateY(2px)
+}
+
+.ring, .ring2 {
+  opacity: 0;
+  background: grey;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 19px;
+  left: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.active span, .active-2 span {
+  color: #F5CC27 !important;
+}
+
+.active-2 .ring {
+  width: 58px !important;
+  height: 58px !important;
+  top: -10px !important;
+  left: -10px !important;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 1 !important;
+}
+
+.active-2 .ring {
+  background: #F5CC27 !important;
+}
+
+.active-2 .ring2 {
+  background: #fff !important;
+}
+
+.active-3 .ring2 {
+  width: 60px !important;
+  height: 60px !important;
+  top: -11px !important;
+  left: -11px !important;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 1 !important;
+}
+
+.info {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: grey;
+  position: relative;
+  top: 30px;
+  left: -46px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.info-tog {
+  color: #F5CC27;
+  position: relative;
+  top: 45px;
+  opacity: 1;
 }
 

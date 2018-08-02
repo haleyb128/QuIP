@@ -44,6 +44,9 @@ module.exports = function (app) {
     app.get("/userQuoteCard", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/userQuoteCard.html"));
     });
+    app.get("/myquotes", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/myQuotes.html"));
+    });
     app.get('/register', (req, res) => {
         res.render('register', {});
     });

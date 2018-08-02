@@ -20,7 +20,7 @@ Nav Bar ========================================================================
 ================================================================================================================== -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="./home.html">
+        <a class="navbar-brand" href="#">
             <img class="logo" src="./transparentQ.png" height="70">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false"
@@ -37,7 +37,7 @@ Nav Bar ========================================================================
                 </li>
                 <li class="nav-item dropleft">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                        <b id="userState"></b>
+                        <b id="userState">Login</b>
                         <span class="caret"></span>
                     </a>
                     <ul id="login-dp" class="dropdown-menu">
@@ -56,7 +56,13 @@ Nav Bar ========================================================================
                                             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block" id="userSubmit">Sign in</button>
+                                            <button type="submit" class="btn btn-secondary btn-block" id="userSubmit">Sign in</button>
+                                        </div>
+                                        <div class="fav-btn">
+                                            <span href="" class="favme dashicons dashicons-heart"></span>
+                                        </div>
+                                        <div class="fav-btn">
+                                            <span href="" class="favme dashicons dashicons-heart"></span>
                                         </div>
                                     </form>
                                     <div class="bottom text-center">
@@ -65,23 +71,21 @@ Nav Bar ========================================================================
                                         </a>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="row" id="userStateOut">
                                 <div class="col-md-12">
                                     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block" id="logOut">Log Out</button>
+                                            <button type="submit" class="btn btn-secondary btn-block" id="logOut">Log Out</button>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./about.html">About Us</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Us</a>
+                    </li>
             </ul>
         </div>
     </nav>

@@ -16,7 +16,7 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="./home.html">
+        <a class="navbar-brand" href="#">
             <img class="logo" src="./transparentQ.png" height="70">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false"
@@ -24,20 +24,22 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar1">
+
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="./home.html">Home
-                        <span class="sr-only"></span>
+                        <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item dropleft">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                        <b id="userState"></b>
+                        <b id="userState">Login</b>
                         <span class="caret"></span>
                     </a>
                     <ul id="login-dp" class="dropdown-menu">
                         <li>
                             <div class="row" id="userStateIn">
+
                                 <div class="col-md-12">
                                     Login
                                     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
@@ -52,15 +54,19 @@
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-secondary btn-block" id="userSubmit">Sign in</button>
                                         </div>
+                                        <div class="fav-btn">
+                                            <span href="" class="favme dashicons dashicons-heart"></span>
+                                        </div>
+                                        <div class="fav-btn">
+                                            <span href="" class="favme dashicons dashicons-heart"></span>
+                                        </div>
                                     </form>
-
                                     <div class="bottom text-center">
                                         <a href="./signUp.html">
                                             <b>Sign Up</b>
                                         </a>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="row" id="userStateOut">
                                 <div class="col-md-12">
@@ -73,10 +79,10 @@
                             </div>
                         </li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./favorites.html">Favorites</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./favorites.html">Favorites</a>
+                    </li>
+
             </ul>
         </div>
     </nav>
@@ -239,6 +245,27 @@
 
             </div>
         </div>
+
+        <div class="sticky-bottom">
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l4 offset-l2 s12">
+                            <h5 class="white-text">Links</h5>
+                            <ul>
+                                <li>
+                                    <a class="grey-text text-lighten-3" href="/api/">API List</a>
+                                </li>
+                                <li>
+                                    <a class="grey-text text-lighten-3" href="https://github.com/haleyb128/QuIP.git">GitHub Repo</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
     </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>

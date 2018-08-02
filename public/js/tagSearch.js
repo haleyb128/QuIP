@@ -105,7 +105,7 @@ $(document).ready(function () {
                 subDivFav.append(favDiv2)
                 let favP = $("<p>")
                 favP.addClass("info")
-                favP.text("Add to favorites")
+                favP.text("Added to favorites")
                 subDivFav.append(favP)
                 $("#new-div-" + divID).append(subDiv9)
                 $("#subdiv9-" + i + divID).append(subDiv1)
@@ -187,32 +187,5 @@ $(document).ready(function () {
             }
 
         })
-    })
-    $('.click').click(function () {
-        if ($('span').hasClass("fa-star")) {
-            $('.click').removeClass('active')
-            setTimeout(function () {
-                $('.click').removeClass('active-2')
-            }, 30)
-            $('.click').removeClass('active-3')
-            setTimeout(function () {
-                $('span').removeClass('fa-star')
-                $('span').addClass('fa-star-o')
-            }, 15)
-        } else {
-            $('.click').addClass('active')
-            $('.click').addClass('active-2')
-            setTimeout(function () {
-                $('span').addClass('fa-star')
-                $('span').removeClass('fa-star-o')
-            }, 150)
-            setTimeout(function () {
-                $('.click').addClass('active-3')
-            }, 150)
-            $('.info').addClass('info-tog')
-            setTimeout(function () {
-                $('.info').removeClass('info-tog')
-            }, 1000)
-        }
     })
 })

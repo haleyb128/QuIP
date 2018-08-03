@@ -80,15 +80,20 @@ $(document).ready(function () {
         console.log(author)
         console.log(cat)
         console.log(subCat)
-        $.post("/api/addquote", {
-            Quote: quote,
-            Author: author,
-            Category: cat,
-            Subcategory: subCat,
-            UserId: loginID
-        }).then(function () {
-            location.reload();
-        })
+        if (loginID == 0) {
+            $('#loginModal').modal("show")
+        }
+        else {
+            $.post("/api/addquote", {
+                Quote: quote,
+                Author: author,
+                Category: cat,
+                Subcategory: subCat,
+                UserId: loginID
+            }).then(function () {
+                location.reload();
+            })
+        }
     })
     function getUserQuotes() {
         $.get("/api/quotes/" + loginID, function (data) {

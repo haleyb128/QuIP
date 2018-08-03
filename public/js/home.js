@@ -11,8 +11,8 @@ $(document).ready(function () {
                     break
                 }
                 else {
-                    localStorage.setItem("id", "0")
-                    loginID = localStorage.getItem("id")
+                    // localStorage.setItem("id", "0")
+                    // loginID = localStorage.getItem("id")
                     $("#userState").text("Login");
                     $("#userStateOut").hide();
                     $("#userStateIn").show();

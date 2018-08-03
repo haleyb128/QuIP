@@ -63,10 +63,10 @@ $(document).ready(function () {
 
             }
             else if (userObj.name != userName) {
-                alert("WRONG NAME")
+                $('#userModal').modal("show")
             }
             else if (userObj.password != password) {
-                alert("WRONG PASSWORD")
+                $('#passwordModal').modal("show")
             }
         })
     })
@@ -80,15 +80,20 @@ $(document).ready(function () {
         console.log(author)
         console.log(cat)
         console.log(subCat)
-        $.post("/api/addquote", {
-            Quote: quote,
-            Author: author,
-            Category: cat,
-            Subcategory: subCat,
-            UserId: loginID
-        }).then(function () {
-            location.reload();
-        })
+        if (loginID == 0) {
+            $('#loginModal').modal("show")
+        }
+        else {
+            $.post("/api/addquote", {
+                Quote: quote,
+                Author: author,
+                Category: cat,
+                Subcategory: subCat,
+                UserId: loginID
+            }).then(function () {
+                location.reload();
+            })
+        }
     })
     function getUserQuotes() {
         $.get("/api/quotes/" + loginID, function (data) {
@@ -121,7 +126,7 @@ $(document).ready(function () {
         $.ajax({
             url: '/api/destroy/' + destroyId,
             type: 'DELETE',
-            success: function(result) {
+            success: function (result) {
                 console.log(result)
                 location.reload();
             }

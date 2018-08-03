@@ -159,10 +159,10 @@ $(document).ready(function () {
                 location.reload();
             }
             else if (userObj.name != userName) {
-                alert("WRONG NAME")
+                $('#userModal').modal("show")
             }
             else if (userObj.password != password) {
-                alert("WRONG PASSWORD")
+                $('#passwordModal').modal("show")
             }
 
         })

@@ -98,6 +98,14 @@ $(document).ready(function () {
                 let backSpan = $("<span>")
                 backSpan.text("Click to get similar quotes")
                 backSpan.attr("id", "demo1 " + i + divID)
+                let removeFav = $("<button>")
+                removeFav.addClass("button")
+                removeFav.attr("data-id", data[i].id)
+                removeFav.addClass("removeFav")
+                removeFav.attr("id", "remove-" + i + divID)
+                let removeSpan = $("<span>")
+                removeSpan.text("Remove from favorites")
+                removeSpan.attr("id", "demo1 " + i + divID)
                 $("#new-div-" + divID).append(subDiv9)
                 $("#subdiv9-" + i + divID).append(subDiv1)
                 $("#subdiv1-" + i + divID).append(subDiv2)
@@ -112,6 +120,8 @@ $(document).ready(function () {
                 $("#subdiv8-" + i + divID).append(backQuote)
                 $("#back-quote-" + i + divID).append(backAuthor)
                 $("#back-author-" + i + divID).append(backSpan)
+                $("#subdiv8-" + i + divID).append(removeFav)
+                $("#remove-" + i + divID).append(removeSpan)
             }
         });
     }
@@ -172,5 +182,17 @@ $(document).ready(function () {
         let redirectId = $(this).data("id")
         localStorage.setItem("category", redirectId)
         window.location.href = "/" + redirectId
+    })
+    $("#quote-container").on("click", ".removeFav", function (event) {
+        event.preventDefault();
+        let favId = $(this).data("id")
+        $.ajax({
+            url: '/api/favorites/' + favId,
+            type: 'DELETE',
+            success: function (result) {
+                console.log(result)
+                location.reload();
+            }
+        });
     })
 })

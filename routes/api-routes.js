@@ -53,12 +53,11 @@ module.exports = function (app) {
             res.json(dbquotes);
         });
     });
-    app.delete("/api/favorites/:username", function (req, res) {
+    app.delete("/api/favorites/:id", function (req, res) {
         db.Favorite.destroy({
             where: {
                 id: req.params.id
-            },
-            include: [db.Quotes]
+            }
         }).then(function (dbFavorites) {
             res.json(dbFavorites);
         });

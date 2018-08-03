@@ -265,8 +265,8 @@ Sign Up Form ===================================================================
 .sign-up-body {
     font-family: "Lato", sans-serif;
     text-align: center;
-    height: 100vh;
-    overflow: hidden;
+    height: 120vh;
+    overflow: auto;
     margin: 0;
 }
 .sign-up-body fieldset {
@@ -408,7 +408,7 @@ Sign Up Form ===================================================================
   /* --- End template styling --- */
 }
 .container_inner {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   top: 50%;

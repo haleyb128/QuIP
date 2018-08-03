@@ -162,10 +162,10 @@ $(document).ready(function () {
                 location.reload();
             }
             else if (userObj.name != userName) {
-                alert("WRONG NAME")
+                $('#userModal').modal("show")
             }
             else if (userObj.password != password) {
-                alert("WRONG PASSWORD")
+                $('#passwordModal').modal("show")
             }
 
         })
@@ -178,7 +178,7 @@ $(document).ready(function () {
         let subcategory = $(this).data("subcat")
         let textId = $(this).data("id")
         if (loginID == 0) {
-            $("#back-quote-" + textId).text("You must be logged in to add favorites")
+            $('#favModal').modal("show")
         }
         else {
             $.post("/api/favorites", {

@@ -41,7 +41,7 @@ $(document).ready(function () {
             console.log(name)
             console.log(compareName)
             if (compareName === name) {
-                alert("Name taken!")
+                $('#nameTaken').modal("show")
             }
             else {
                 $.post("/api/createuser", {
@@ -100,10 +100,10 @@ $(document).ready(function () {
                 window.location.href = "/"
             }
             else if (userObj.name != userName) {
-                alert("WRONG NAME")
+                $('#userModal').modal("show")
             }
             else if (userObj.password != password) {
-                alert("WRONG PASSWORD")
+                $('#passwordModal').modal("show")
             }
         })
     })
